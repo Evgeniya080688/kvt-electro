@@ -1,97 +1,177 @@
 /*шапка сайта с меню*/
+	.header__menu {
+		position: relative;
+		width: 100%;
+		height: auto;
+		background: rgb(111,74,5);
+		background: linear-gradient(139deg, rgba(241,186,31,0.8295693277310925) 0%, rgba(255,231,0,1) 46%, rgba(204,204,204,1) 100%);
 
-.main-header {
-	position: relative;
-	padding-top: 20px;
-	padding-bottom: 35px;
-	width: 100%;
-	height: auto;
-	background-color: #fbfbfb;
-	z-index: 0;
-	overflow: hidden;
-	transition: 0.6s;
-}
-
-	.main-header .container {
-		display: flex;
-		justify-content: space-between;
 	}
 
-		/*кнопка мобильного меню*/
 
-		.main-nav__burger {
-			display: none;
-			margin: 4px 0 0 0;
-			padding: 0;
-			width: 45px;
-			height: 40px;
-			background-color: transparent;
-			border: none;
-			transition: 0.6s;
-		}
-
-			.main-nav__burger i {	
-				display: block;
-				font-size: 35px;
-				color: @ultrapink;
-				background: linear-gradient(to top right, #ff8f5a, #ff2f96);
-			  	-webkit-background-clip: text;
-			  	-webkit-text-fill-color: transparent;
-			  	transition: 0.6s;
-			}
-
-		/*список меню*/
-
-		.main-nav__list {
+		.header__menu .container {
 			display: flex;
-			margin: 14px 0;
-			padding-left: 0; 
+			justify-content: space-between;
+			padding-right: 0.94em;
+   			padding-left: 0.94em;
 		}
 
-			.main-nav__item {
-				list-style: none;
-				font-size: 11px;
-				text-decoration: none;
-				color: @black;
-				margin-right: 20px;
+			.menu__nav {
+				padding-left: 5em;				
 			}
 
-				.main-nav__item--active .main-nav__link {
-					color: @lightpink;
-					border-bottom: 1px solid @lightpink;
+				.main-nav__burger {
+					display: none;
 				}
 
-				.main-nav__link {
-					text-decoration: none;
-					color: @black;
+				.main-nav__list {
+					display: flex;
+					justify-content: space-between;
+					list-style: none;
+					padding-left: 0;
 				}
 
-		/*блок с контактами и кнопкой-заказа звонка*/		
+					.main-nav__item {
+						margin-right: 1em;
+						transition: 5s;
+					}
 
-		.main-header__contacts {
-			padding: 0;
+						.main-nav__link {
+							text-decoration: none;
+							color: @black;
+							font-size: 1em;
+						    position: relative;
+						    transition: all 0.6s;
+						}
+
+							.main-nav__link:before {
+								content: "";
+						        width: 0;
+						        height: 0.1em;
+						        position: absolute;
+						        bottom: 0;
+						        left: 0;
+						        background: @black;
+						        transition: all 0.3s;
+							}
+
+							.main-nav__link:hover {
+								color: @white;
+						    }
+
+							.main-nav__link:hover:before {
+								width: 100%;
+						        left: 0;
+						        background: @white;							
+							}
+
+						.nav-item__submenu{
+							display: none;
+						}
+
+			.menu__search {
+				position: relative;
+				margin-top: 0.75em;
+				padding: 0;
+				height: 2em;				
+			}		
+
+				.search {
+					min-width: 20em;
+					padding-right: 2em;
+					line-height: 1.9em;					
+					border: none;											
+				}	
+
+				.send {
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 2em;
+					height: 2em;
+					border: 0;
+					cursor: pointer;
+				}
+
+/*Контактная информация и логотип*/
+
+	.header-info {
+		position: relative;
+		height: 3.5em;
+		background-color: @black;		
+	}			
+
+		.header-info:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 3.5em;
+			height: 3.5em;
+			background-color: @white;
 		}
 
-		.header-contacts {
-			display: flex;	
+		.header-info:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 3.5em;
+			width: 0; 
+			height: 0;
+			border-top: 3.5em solid @white;
+			border-right: 3.5em solid transparent;
 		}
 
-			.header-contacts__call-order {
-				margin-top: 7px;
-				width: 149px;
+		.header-info .container {
+			display: flex;
+			justify-content: flex-start;
+			position: relative;;
+		}
+
+			.header-info__logo {
+				position: absolute;				
+				top: -2em;
+				z-index: 10;
 			}
 
-			.header-contacts__call-order img{
-				display: none;
+			.header-contacts__name {
+				font-size: 1.7em;
 			}
 
-			.header-contacts__link {
-				text-decoration: none;
-				color: @black;
-				font-size: 16px;
-				font-weight: 600;
-				line-height: 16px;
-				text-decoration: none;
-				padding-top: 0;
-				margin: 14px 38px 0 0;
+			.header-info__contacts {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				margin-left: 5.5em;				
+				color: @white;
 			}
+
+				.header-contacts__title {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin-right: 1em;
+				}
+
+				.header-contacts_adress {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+
+				.header-tel {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-between;
+				}
+
+					.header-tel__link {
+						text-decoration: none;
+						color: @white;
+						margin-left: 1em;
+					}
+
+					.header-tel__link:hover {
+						color: @adultyellow;
+					}
+

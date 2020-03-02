@@ -5,9 +5,13 @@ const OptimizeCSSPlugin = require('cssnano');
 const TerserPlugin = require("terser-webpack-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = merge(common, {
    	mode: 'production',
+   	plugins: [
+    	new CleanWebpackPlugin()
+    ],
    	optimization: {
 	    minimizer: [
 	     	new UglifyJsPlugin({
