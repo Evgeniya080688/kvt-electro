@@ -8,7 +8,7 @@
 
 1. Установите `Node.js`.
 
-2. npm install
+2. npm install запуск на localhost:8080 в режиме отслеживания
 
 3. npm run dev для версии разработки
 
