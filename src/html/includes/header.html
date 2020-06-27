@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
 		<link rel="shortcut icon" href="favicon/favicon.ico" />
 		<link rel="stylesheet" href="css/style.bundle.css" />
 
@@ -14,84 +13,136 @@
     	<header class="main-header">
     		<div class="header__menu menu">
 				<div class="container">	
+
+					<div class="menu__links">
+						<a href="#" title="Скачать прайс-лист">
+							<img src="img/icons/price.svg"> 
+						</a>	
+						<a href="#" title="Он-лайн заказ">
+							<img src="img/icons/shop.svg">
+						</a>	
+					</div>
 		
 					<nav class="menu__nav main-nav">
-						<button class="main-nav__burger" aria-label="Burger menu">
-							<img src="img/burger.png" alt="Мобильное меню">
-						</button>
+						<div class="main-nav__burger burger" >
+						  	<span class="burger__item burger__item--top"></span>
+						  	<span class="burger__item burger__item--middle"></span>
+						  	<span class="burger__item burger__item--bottom"></span>
+						</div>
 
 						<ul class="main-nav__list">
-							<li class="main-nav__item main-nav__item--active">
+							<li class="main-nav__item">
 								<a class="main-nav__link" href="">завод</a>
 							</li>
 
-							<li class="main-nav__item nav-item">
-								<a class="main-nav__link" href="" >продукция</a>
+							<li class="main-nav__item nav-item" >
+								<a id="main-nav__prod" class="main-nav__link"  href="#" >продукция</a>
 								<div class="nav-item__submenu submenu">
-									<ul >
+									<div class="submenu__web">
+										<h2 class="submenu__title">
+											<a href="/prod">Каталог продукции</a>
+										</h2>
+										<ul class="submenu__list">
 			                            <li class="submenu__item" ><a href="#">Кабельные наконечники</a></li>
-			                            <li><a href="#">Болтовые соединители</a></li>
-			                            <li><a href="#">Изолированные наконечники</a></li>
-			                            <li><a href="#">Втулочные наконечники</a></li>
-			                            <li><a href="#">Изолированные зажимы</a></li>
-			                            <li><a href="#">Кабельные муфты «КВТ»</a></li>
-			                            <li><a href="#">Компоненты кабельных муфт</a></li>
-			                            <li><a href="#">Наборы термоусадочных трубок</a></li>
-			                            <li><a href="#">Клеевая термоусадочная трубка</a></li>
-			                            <li><a href="#">Термоусадочные трубки, трубки ТУТ</a></li>
-			                            <li><a href="#">Высоковольтные термоусадочные трубки</a></li>
-			                            <li><a href="#">Обжимной инструмент: пресс-клещи, кримперы, прессы ПГР</a></li>
-			                            <li><a href="#">Ножницы для резки кабеля и провода</a></li>
-			                            <li><a href="#">Инструмент для снятия изоляции: стрипперы, ножи монтерские</a></li>
-			                            <li><a href="#">Гидравлические помпы (насосы)</a> </li>
-			                            <li><a href="#">Шиногибы, шинорезы, шинодыры</a></li>
-			                            <li><a href="#">Домкраты гидравлические</a></li>
-			                            <li><a href="#">Инструмент для пробивки отверстий</a></li>
-			                            <li><a href="#">Диэлектрический инструмент</a></li>
-			                            <li><a href="#">Слесарно-монтажный инструмент</a></li>
-			                            <li><a href="#">Сумки, пояса и наборы инструментов</a></li>
-			                            <li><a href="#">Протяжка кабеля, мини УЗК</a></li>
-			                            <li><a href="#">Сжимы ответвительные</a></li>
-			                            <li><a href="#">Арматура для СИП</a></li>
-			                            <li><a href="#">Инструмент для монтажа СИП и ВЛ</a></li>
-			                            <li><a href="#">Автоматическое оборудование и наконечники GLW</a></li>
-			                            <li><a href="#">Стяжки кабельные стальные</a></li>
-			                            <li><a href="#">Скобы кабельные крепежные</a></li>
-			                            <li><a href="#">Металлорукав и фитинги</a></li>
-			                            <li><a href="#">Мультиметры и приборы КВТ</a></li>
-			                            <li><a href="#">Гидравлические помпы (насосы)</a> </li>
-			                            <li><a href="#">Шиногибы, шинорезы, шинодыры</a></li>
-			                            <li><a href="#">Домкраты гидравлические</a></li>
-			                            <li><a href="#">Инструмент для пробивки отверстий</a></li>
-			                            <li><a href="#">Диэлектрический инструмент</a></li>
-			                            <li><a href="#">Слесарно-монтажный инструмент</a></li>
-			                            <li><a href="#">Сумки, пояса и наборы инструментов</a></li>
-			                            <li><a href="#">Протяжка кабеля, мини УЗК</a></li>
-			                            <li><a href="#">Сжимы ответвительные</a></li>
-			                            <li><a href="#">Арматура для СИП</a></li>
-			                            <li><a href="#">Инструмент для монтажа СИП и ВЛ</a></li>
-			                            <li><a href="#">Автоматическое оборудование и наконечники GLW</a></li>
-			                            <li><a href="#">Стяжки кабельные стальные</a></li>
-			                            <li><a href="#">Скобы кабельные крепежные</a></li>
-			                            <li><a href="#">Металлорукав и фитинги</a></li>
-			                            <li><a href="#">Мультиметры и приборы КВТ</a></li>
-			                            <li><a href="#">Гидравлические помпы (насосы)</a> </li>
-			                            <li><a href="#">Шиногибы, шинорезы, шинодыры</a></li>
-			                            <li><a href="#">Домкраты гидравлические</a></li>
-			                            <li><a href="#">Инструмент для пробивки отверстий</a></li>
-			                            <li><a href="#">Диэлектрический инструмент</a></li>
-			                            <li><a href="#">Слесарно-монтажный инструмент</a></li>
-			                            <li><a href="#">Сумки, пояса и наборы инструментов</a></li>
-			                            <li><a href="#">Протяжка кабеля, мини УЗК</a></li>
-			                            <li><a href="#">Сжимы ответвительные</a></li>
-			                            <li><a href="#">Арматура для СИП</a></li>
-			                            <li><a href="#">Инструмент для монтажа СИП и ВЛ</a></li>
-			                            <li><a href="#">Автоматическое оборудование и наконечники GLW</a></li>
-			                            <li><a href="#">Стяжки кабельные стальные</a></li>
-			                            <li><a href="#">Скобы кабельные крепежные</a></li>
-			                            <li><a href="#">Металлорукав и фитинги</a></li>
-			                            <li><a href="#">Мультиметры и приборы КВТ</a></li>
-		                          	</ul>
+			                            <li class="submenu__item"><a href="#">Болтовые соединители</a></li>
+			                            <li class="submenu__item"><a href="#">Изолированные наконечники</a></li>
+			                            <li class="submenu__item"><a href="#">Втулочные наконечники</a></li>
+			                            <li class="submenu__item"><a href="#">Изолированные зажимы</a></li>
+			                            <li class="submenu__item"><a href="#">Кабельные муфты «КВТ»</a></li>
+			                            <li class="submenu__item"><a href="#">Компоненты кабельных муфт</a></li>
+			                            <li class="submenu__item"><a href="#">Наборы термоусадочных трубок</a></li>
+			                            <li class="submenu__item"><a href="#">Клеевая термоусадочная трубка</a></li>
+			                            <li class="submenu__item"><a href="#">Термоусадочные трубки, трубки ТУТ</a></li>
+			                            <li class="submenu__item"><a href="#">Высоковольтные термоусадочные трубки</a></li>
+			                            <li class="submenu__item"><a href="#">Обжимной инструмент: пресс-клещи, кримперы, прессы ПГР</a></li>
+			                            <li class="submenu__item"><a href="#">Ножницы для резки кабеля и провода</a></li>
+			                            <li class="submenu__item"><a href="#">Инструмент для снятия изоляции: стрипперы, ножи монтерские</a></li>
+			                            <li class="submenu__item"><a href="#">Гидравлические помпы (насосы)</a> </li>
+			                            <li class="submenu__item"><a href="#">Шиногибы, шинорезы, шинодыры</a></li>
+			                            <li class="submenu__item"><a href="#">Домкраты гидравлические</a></li>
+			                            <li class="submenu__item"><a href="#">Инструмент для пробивки отверстий</a></li>
+			                            <li class="submenu__item"><a href="#">Диэлектрический инструмент</a></li>
+			                            <li class="submenu__item"><a href="#">Слесарно-монтажный инструмент</a></li>
+			                            <li class="submenu__item"><a href="#">Сумки, пояса и наборы инструментов</a></li>
+			                            <li class="submenu__item"><a href="#">Протяжка кабеля, мини УЗК</a></li>
+			                            <li class="submenu__item"><a href="#">Сжимы ответвительные</a></li>
+			                            <li class="submenu__item"><a href="#">Арматура для СИП</a></li>
+			                            <li class="submenu__item"><a href="#">Инструмент для монтажа СИП и ВЛ</a></li>
+			                            <li class="submenu__item"><a href="#">Автоматическое оборудование и наконечники GLW</a></li>
+			                            <li class="submenu__item"><a href="#">Стяжки кабельные стальные</a></li>
+			                            <li class="submenu__item"><a href="#">Скобы кабельные крепежные</a></li>
+			                            <li class="submenu__item"><a href="#">Металлорукав и фитинги</a></li>
+			                            <li class="submenu__item"><a href="#">Мультиметры и приборы КВТ</a></li>
+			                            <li class="submenu__item"><a href="#">Гидравлические помпы (насосы)</a> </li>
+			                            <li class="submenu__item"><a href="#">Шиногибы, шинорезы, шинодыры</a></li>
+			                            <li class="submenu__item"><a href="#">Домкраты гидравлические</a></li>
+			                            <li class="submenu__item"><a href="#">Инструмент для пробивки отверстий</a></li>
+			                            <li class="submenu__item"><a href="#">Диэлектрический инструмент</a></li>
+			                            <li class="submenu__item"><a href="#">Слесарно-монтажный инструмент</a></li>
+			                            <li class="submenu__item"><a href="#">Сумки, пояса и наборы инструментов</a></li>
+			                            <li class="submenu__item"><a href="#">Протяжка кабеля, мини УЗК</a></li>
+			                            <li class="submenu__item"><a href="#">Сжимы ответвительные</a></li>
+			                            <li class="submenu__item"><a href="#">Арматура для СИП</a></li>
+			                            <li class="submenu__item"><a href="#">Инструмент для монтажа СИП и ВЛ</a></li>
+			                            <li class="submenu__item"><a href="#">Автоматическое оборудование и наконечники GLW</a></li>
+			                            <li class="submenu__item"><a href="#">Стяжки кабельные стальные</a></li>
+			                            <li class="submenu__item"><a href="#">Скобы кабельные крепежные</a></li>
+			                            <li class="submenu__item"><a href="#">Металлорукав и фитинги</a></li>
+			                            <li class="submenu__item"><a href="#">Мультиметры и приборы КВТ</a></li>
+			                            <li class="submenu__item"><a href="#">Гидравлические помпы (насосы)</a> </li>
+			                            <li class="submenu__item"><a href="#">Шиногибы, шинорезы, шинодыры</a></li>
+			                            <li class="submenu__item"><a href="#">Домкраты гидравлические</a></li>
+			                            <li class="submenu__item"><a href="#">Инструмент для пробивки отверстий</a></li>
+			                            <li class="submenu__item"><a href="#">Диэлектрический инструмент</a></li>
+			                            <li class="submenu__item"><a href="#">Слесарно-монтажный инструмент</a></li>
+			                            <li class="submenu__item"><a href="#">Сумки, пояса и наборы инструментов</a></li>
+			                            <li class="submenu__item"><a href="#">Протяжка кабеля, мини УЗК</a></li>
+			                            <li class="submenu__item"><a href="#">Сжимы ответвительные</a></li>
+			                            <li class="submenu__item"><a href="#">Арматура для СИП</a></li>
+			                            <li class="submenu__item"><a href="#">Инструмент для монтажа СИП и ВЛ</a></li>
+			                            <li class="submenu__item"><a href="#">Автоматическое оборудование и наконечники GLW</a></li>
+			                            <li class="submenu__item"><a href="#">Стяжки кабельные стальные</a></li>
+			                            <li class="submenu__item"><a href="#">Скобы кабельные крепежные</a></li>
+			                            <li class="submenu__item"><a href="#">Металлорукав и фитинги</a></li>
+			                            <li class="submenu__item"><a href="#">Мультиметры и приборы КВТ</a></li>
+		                          		</ul>
+		                          	</div>	
+
+		                          	<div class="submenu__extra">
+		                          		<div class="submenu__price">		         
+											<img title="Скачать прайс-лист" alt="Скачать прайс-лист" src="img/icons/price.svg"> 											
+		                          			<a href="#">Скачать прайс-лист</a>
+		                          		</div>
+		                          		<div class="submenu__shop">
+											<img title="Он-лайн заказ" alt="Он-лайн заказ" src="img/icons/shop.svg">
+											
+		                          			<a href="#">Он-лайн заказ</a>
+		                          		</div>
+		                          		<div class="submenu__catalogues catalogues">
+		                          			<ul class="catalogues__list">
+		                          				<li class="catalogues__item">
+		                          					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/cablearms_cover_face.jpg">
+		                          				</li>
+		                          				<li class="catalogues__item">
+		                          					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/cover_measure_kvt_face.jpg">
+		                          				</li>
+		                          				<li class="catalogues__item">
+		                          					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/fittingtools_cover_face.jpg">
+		                          				</li>
+		                          				<li class="catalogues__item">
+		                          					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/fortis_cover_face.jpg">
+		                          				</li>
+		                          				<li class="catalogues__item">
+		                          					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/thermo_cover_face.jpg">
+		                          				</li>
+		                          				<li class="catalogues__item">
+		                          					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/tools_cover_face.jpg">
+		                          				</li>
+		                          			</ul>
+		                          		</div>
+		                          	</div>		                          	
+		                          	<div class="submenu__close">
+		                          	</div>
 								</div>		
 								
 							</li>
@@ -120,8 +171,6 @@
 			</div>
 
 			<div class="header__info header-info">
-				
-
 				<div class="container">	
 					<div class="header-info__logo">
 						<a href="#">
@@ -131,11 +180,14 @@
 
 					<div class="header-info__contacts header-contacts">
 						<div class="header-contacts__title">
-							<h1 class="header-contacts__name">Торговый дом КВТ</h1>
+							<span class="header-contacts__name">Торговый дом КВТ</span>
 						</div>					
 
-						<div class="header-contacts_adress">
-							<span>Академический проезд, 27</span>
+						<div class="header-contacts__adress">
+							
+							<img title="Схема проезда" alt="Схема проезда" src="img/icons/location.svg">
+							
+							<a href="№" title="Схема проезда">Академический проезд, 27</a></span>
 						</div>
 						
 						<div class="header-contacts__tel header-tel">
