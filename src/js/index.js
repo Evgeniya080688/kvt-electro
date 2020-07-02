@@ -1,5 +1,7 @@
 "use strict";
 
+import * as banerAction from './banner.js';
+
 //Burger menu
 let burgerEl = document.querySelector('.burger');
   
@@ -26,4 +28,7 @@ prodNavEl.addEventListener("click", openProdList);
 prodCloseBtn.addEventListener("click", function() {
 	prodListEl.classList.remove('nav-item__submenu--active');
 });
+
+
+
 

@@ -80,8 +80,7 @@
 				.main-nav__list {
 					display: flex;
 					justify-content: space-between;
-					list-style: none;
-					padding-left: 0;
+					.list-reset;
 				}
 
 					.main-nav__item {
@@ -166,9 +165,11 @@
 									flex-wrap: wrap;
 									flex-direction: column;
 									width: 90%;
+									.list-reset;
 									padding-left: 3em;
 									max-height: 45em;
-									list-style: none;
+									height: 45em;
+									
 								}
 
 									.submenu__item {
@@ -289,7 +290,8 @@
 					position: relative;
 					min-width: 20em;
 					padding-right: 2em;
-					line-height: 1.85em;					
+					line-height: 1.85em;
+					height: 2em;					
 					border: none;		
 					background-color: rgba(256,256,256, 0.7);									
 				}	
@@ -383,7 +385,7 @@
 			left: 3.5em;
 			width: 0; 
 			height: 0;
-			border-top: 3.5em solid @white;
+			border-top: 7.5em solid @white;
 			border-right: 3.5em solid transparent;
 		}
 
@@ -413,6 +415,7 @@
 					flex-direction: column;
 					justify-content: center;
 					margin-right: 1em;
+					margin-left: 1em;
 				}
 
 					.header-contacts__name {
