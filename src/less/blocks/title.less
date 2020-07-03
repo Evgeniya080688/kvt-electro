@@ -1,0 +1,39 @@
+.page-title {
+	position: relative;
+
+	& h2 {
+		position: relative;
+		z-index: 10;
+		line-height: 1.7em;
+	}
+	
+}
+
+
+	.page-title__background {
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: -3em;
+			height: 1.5em;
+			width: 50em;
+			background-color: @black; 
+			transform: skewX(-20deg);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			top: 0.5em;
+			left: -3em;
+			height: 1.5em;
+			width: 49.5em;
+			background: rgb(111,74,5);
+			background: linear-gradient(139deg, rgba(241,186,31,0.8) 0%, rgba(255,231,0,1) 46%, rgba(204,204,204,1) 100%);
+			transform: skewX(-20deg);
+		}
+		
+	}

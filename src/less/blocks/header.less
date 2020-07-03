@@ -4,7 +4,7 @@
 		width: 100%;
 		height: auto;
 		background: rgb(111,74,5);
-		background: linear-gradient(139deg, rgba(241,186,31,0.8295693277310925) 0%, rgba(255,231,0,1) 46%, rgba(204,204,204,1) 100%);
+		background: linear-gradient(139deg, rgba(241,186,31,0.8) 0%, rgba(255,231,0,1) 46%, rgba(204,204,204,1) 100%);
 
 	}
 
@@ -373,21 +373,24 @@
 			content: "";
 			position: absolute;
 			top: 0;
-			width: 3.5em;
+			left: -1em;
+			width: 6.5em;
 			height: 3.5em;
 			background-color: @white;
+			border: 0.1em solid @white;
+			transform: skewX(-20deg);
 		}
 
-		.header-info:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 3.5em;
-			width: 0; 
-			height: 0;
-			border-top: 7.5em solid @white;
-			border-right: 3.5em solid transparent;
-		}
+		// .header-info:before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 3.5em;
+		// 	width: 0; 
+		// 	height: 0;
+		// 	border-top: 7.5em solid @white;
+		// 	border-right: 3.5em solid transparent;
+		// }
 
 		.header-info .container {
 			display: flex;
