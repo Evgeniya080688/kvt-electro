@@ -1,0 +1,39 @@
+.service-list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 3em;
+	.list-reset;
+}
+
+	.service-list__item {
+		width: 16%;		
+
+		& a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-decoration: none;
+			transition: all 0.5s ease-out 0s;
+
+			& p {
+				text-align: center;
+				text-decoration: none;
+				color: @black;
+			}
+			
+
+			& img {
+				height: 5em;
+			}
+
+			&:hover {
+				transform: scale(1.2);
+			}
+
+			&:hover p{
+				color: @darkgray;
+				
+			}
+		}	
+	}
