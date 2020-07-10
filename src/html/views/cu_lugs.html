@@ -1,0 +1,114 @@
+<% var data = {
+  title: "Кабельные наконечники КВТ",
+  author: "Торговый Дом КВТ"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">
+	<div class="breadcrumbs">
+        <a target="_self" href="./index.html">Главная</a>
+
+        <a target="_self" href="./production.html">Продукция</a>
+
+        <a target="_self" href="./cable_lugs.html">Кабельные наконечники</a>
+
+        <a class="active" href="./cu_lugs.html">Медные кабельные наконечники и гильзы</a>
+    </div>
+
+	<h1>Медные кабельные наконечники и гильзы</h1>
+
+	<div class="product-list">
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<div class="icon-feature">Стандарт КВТ</div>
+				<div class="icon-hit">Хит продаж</div>
+				<img src="img/prod/tmls.jpg" title="ТМЛс" alt="ТМЛс">
+				<p class="product-item__type">Тип: ТМЛс</p>
+				<p class="product-item__description">Наконечники луженые под опрессовку стандарт «КВТ»</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<img src="img/prod/tml.jpg" title="ТМЛ" alt="ТМЛ">
+				<p class="product-item__type">Тип: ТМЛ</p>
+				<p class="product-item__description">Наконечники луженые под опрессовку по ГОСТ 7386-80</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<img src="img/prod/tm.jpg" title="ТМ" alt="ТМ">
+				<p class="product-item__type">Тип: ТМ</p>
+				<p class="product-item__description">Наконечники медные под опрессовку</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<div class="icon-feature">Стандарт DIN</div>
+				<div class="icon-hit">Хит продаж</div>
+				<img src="img/prod/tmldin.jpg" title="ТМЛс" alt="ТМЛс">
+				<p class="product-item__type">Тип: ТМЛ(DIN)</p>
+				<p class="product-item__description">Наконечники луженые под опрессовку стандарт DIN 46235</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<img src="img/prod/tmlu.jpg" title="ТМЛ-У" alt="ТМЛ-У">
+				<p class="product-item__type">Тип: ТМЛ-У</p>
+				<p class="product-item__description">Наконечники медные кабельные с узкой лопаткой</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<img src="img/prod/pm.jpg" title="ПМ" alt="ПМ">
+				<p class="product-item__type">Тип: ПМ</p>
+				<p class="product-item__description">Наконечники кабельные медные под пайку</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<img src="img/prod/nsp.jpg" title="НШП" alt="НШП">
+				<p class="product-item__type">Тип: НШП</p>
+				<p class="product-item__description">Наконечники медные луженые штифтовые</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<img src="img/prod/tmls.jpg" title="ТМЛ(2)" alt="ТМЛ(2)">
+				<p class="product-item__type">Тип: ТМЛ(2)</p>
+				<p class="product-item__description">Медные наконечники под опрессовку с двумя крепежными отверстиями</p>
+			</a>	
+		</div>
+
+	</div>
+
+	<h2>Родственные товары</h2>
+
+	<div class="product-list">
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<div class="icon-new">Новинка</div>
+				<img src="img/prod/nk.jpg" title="Наборы клеммников для сетей уличного освещения" alt="Наборы клеммников для сетей уличного освещения">
+				<p class="product-item__type">Тип: НК</p>
+				<p class="product-item__description">Наборы клеммников для сетей уличного освещения</p>
+			</a>	
+		</div>
+
+		<div class="product-item">
+			<a href="#" title="Ссылка на продукт">
+				<img src="img/prod/kpp.jpg" title="Контактная проводящая паста" alt="Контактная проводящая паста">
+				<p class="product-item__type">Тип: КПП</p>
+				<p class="product-item__description">Контактная проводящая паста</p>
+			</a>	
+		</div>
+
+	</div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>	

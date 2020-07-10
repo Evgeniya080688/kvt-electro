@@ -63,12 +63,12 @@
 						}
 
 							.submenu__title {
-								display: none;
+								padding-left: 0;
 							}
 
 							.submenu__list {
 								flex-wrap: nowrap;
-								min-height: 130em;
+								min-height: 65em;
 								width: 100%;
 								font-size: 0.85em;
 								padding-left: 0;
@@ -244,8 +244,28 @@
 
 	/*product-list*/
 		.product-item {
-			width: 40%;
+			width: 38%;
+			justify-content: space-between;
 		}
+
+		.product-item {
+			margin-bottom: 1em;
+			margin-right: 0.5em;
+			margin-left: 0.5em;
+
+			
+		}	
+
+	/*title*/
+		.page-title {
+			max-width: 100%;
+
+			& h2 {
+				top: 1.5em;
+				line-height: 1.2em;
+				margin-bottom: 2em;
+			}
+		}	
 
 }
 
@@ -318,14 +338,14 @@
 					}
 
 						.submenu__title {
-							display: none;
+							padding-left: 0;
 						}
 
 						/*menu production*/			
 
 						.submenu__list {
 							flex-wrap: nowrap;
-							min-height: 125em;
+							min-height: 60em;
 							width: 100%;
 							font-size: 0.85em;
 							padding-left: 0;
@@ -512,9 +532,24 @@
 	/*product-list*/
 
 		.product-item {
-			width: 26%;
+			width: 25%;
+			margin-bottom: 1em;
+			margin-right: 0.5em;
+			margin-left: 0.5em;
+			font-size: 0.8em;
 		}
 
+	/*title*/
+		.page-title {
+			max-width: 100%;
+
+			& h2 {
+				position: relative;
+				top: 1.5em;
+				line-height: 1.6em;
+				margin-bottom: 2em;
+			}
+		}
 
 }
 
@@ -562,7 +597,7 @@
 		/*menu production*/			
 
 		.submenu__list {
-			min-height: 80em;
+			min-height: 20em;
 		}
 
 			.submenu__item {
@@ -610,7 +645,19 @@
 	/*product-list*/
 
 		.product-item {
-			width: 26%;
+			width: 19%;
+		}
+
+	/*title*/
+		.page-title {
+			max-width: 100%;
+
+			& h2 {
+				position: relative;
+				top: 1.5em;
+				line-height: 1.6em;
+				margin-bottom: 2em;
+			}
 		}
 
 }
@@ -653,7 +700,7 @@
 	/*menu*/
 
 		.submenu__list {
-			min-height: 60em;
+			min-height: 35em;
 		}
 
 			.submenu__item {
@@ -671,7 +718,7 @@
 	/*product-list*/
 
 		.product-item {
-			width: 26%;
+			width: 20%;
 		}
 
 }

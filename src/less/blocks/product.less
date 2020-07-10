@@ -1,18 +1,20 @@
 .product-list {
 	display: flex;
-	justify-content: space-around;
+	justify-content: left;
 	flex-wrap: wrap;
 }
 
 	.product-item {
 		position: relative;
-		width: 12%;
-		margin-bottom: 1em;
+		width: 13%;
+		margin-bottom: 1.5em;
+		margin-right: 0.5em;
+		margin-left: 0.5em;
 		padding: 0.5em;
 		box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
 
 		&:hover {
-			box-shadow: 0px 0px 8px 2px @darkyellow;
+			box-shadow: 0px 0px 8px 2px rgba(241,186,31,0.8);
 		}
 
 		& a {
@@ -24,7 +26,7 @@
 		}
 	}
 
-	.icon-new, .icon-soon, .icon-feature {
+	.icon-new, .icon-soon, .icon-feature, .icon-hit {
 		position: absolute;
 		z-index: 10;
 		color: @white;
@@ -65,12 +67,22 @@
 	}
 
 	.icon-feature {
-		top: 12em;
+		top: 2em;
 		left: 0;
 		width: auto;
 
 		&:before {
 			background-color: @blue;
+		}	
+	}
+
+	.icon-hit {
+		top: -0.5em;
+		left: 0;
+		width: auto;
+
+		&:before {
+			background-color: @red;
 		}	
 	}
 
