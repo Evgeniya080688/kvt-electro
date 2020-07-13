@@ -1,6 +1,11 @@
 /*шапка сайта с меню*/
+.main-header {
+	width: 100%;
+}
+
 	.header__menu {
 		position: relative;
+		top: 0em;
 		width: 100%;
 		height: auto;
 		background: rgb(111,74,5);
@@ -8,10 +13,19 @@
 
 	}
 
+	.fixed {
+		position: fixed;
+		z-index: 11;
+	}
+
 		.header__menu .container {
 			display: flex;
 			justify-content: space-between;
 			
+		}
+
+		.menu__section {
+			display: flex;
 		}
 
 			.menu__nav {
@@ -168,7 +182,7 @@
 									.list-reset;
 									padding-left: 3em;
 									max-height: 45em;
-									height: 45em;
+									height: 35em;
 									
 								}
 
@@ -232,7 +246,7 @@
 								}
 
 									.catalogues__item {
-										width: 40%;
+										width: 30%;
 										margin-right: 1em;
 									}
 
