@@ -1,6 +1,7 @@
 "use strict";
 
 import * as banerAction from './banner.js';
+import * as popupGal from './popup-gallery.js';
 
 //Burger menu
 let burgerEl = document.querySelector('.burger');
@@ -34,7 +35,7 @@ prodCloseBtn.addEventListener("click", function() {
 	prodListEl.classList.remove('nav-item__submenu--active');
 });
 
-
+//Stiky menu
 window.addEventListener('scroll', function() {
 	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 	if ((scrollTop > headerEl.offsetHeight) &&

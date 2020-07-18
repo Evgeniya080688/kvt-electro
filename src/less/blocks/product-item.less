@@ -1,0 +1,135 @@
+.product-info {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+	.product-info__media {
+		position: relative;
+		width: 35%;
+	}
+
+		.media-3d__icon {
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 1.0em;
+			right: 0.2em;
+			width: 3em;
+			height: 3em;
+			//border-radius: 1.5em;
+			
+			text-align: center;
+
+			&:before {
+				content: "3D";
+				position: absolute;
+				z-index: 2;
+				right: 0;
+				top: 0;
+				width: 3em;
+				height: 3em;
+				line-height: 3em;
+				font-weight: 600;				
+				color: @black;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				z-index: 0;
+				right: 0;
+				top: 0;
+				width: 3em;
+				height: 3em;
+				transform: skewX(-20deg);
+				background: rgba(255,221,20,1);				
+			}
+		}
+
+		.media__list {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			.list-reset;
+		}
+
+			.media-list__item {
+				width: 20%;
+				margin: 0.5em;
+
+				&.media-list__main {
+					width: 95%;
+				}
+
+				& a img {
+					width: 100%;
+					box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+				}
+			}
+
+	.product-info__description {
+		position: relative;
+		width: 60%;
+	}
+
+		.product-info__status {
+			display: flex;
+			width: 100%;
+			.list-reset;
+
+			.icon-new, .icon-soon, .icon-feature, .icon-hit {
+				position: relative;
+				top: 0;
+				margin-right: 0.5em;
+			}	
+		}
+
+		.product-info__icons {
+			display: flex;
+			flex-wrap: wrap;
+			.list-reset;
+		}
+
+			.info-icons__item {
+				width: 3.5em;
+				height: 3.5em;
+				padding: 0.5em;
+				margin: 0.5em 0.5em 0.5em 0 ;
+				background-color: @lightgray;
+				transition: all 0.5s;
+
+				&:hover {
+					background-color: @adultyellow;
+				}
+
+				& img {
+					width: 100%;
+				}
+			}
+
+		.product-info__propeties {
+			.list-reset;
+		}
+
+			.product-info__item {
+				padding-left: 1.5em;
+				position: relative;
+				line-height: 1.2em;
+				margin-bottom: 0.7em;
+
+				&:before {
+					content: "";
+					position: absolute;
+					top: 0.3em;
+					left: 0;
+					width: 0.5em;
+					height: 0.5em;
+					background-color: @darkgray;
+					transform: skewX(-20deg);
+				}
+			}
+
+		.product-info__svg {
+
+		}
