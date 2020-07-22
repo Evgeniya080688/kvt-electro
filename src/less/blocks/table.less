@@ -1,0 +1,52 @@
+table {
+	width: 100%;
+	margin-bottom: 2em;
+
+}
+
+tr {
+	background-color: @lightgray;
+	border: 0.2em solid @white;
+	cursor: pointer;
+	transition: all 0.5s;
+
+	&:nth-child(2n) {
+		background-color: @gray;
+	}
+
+	&:hover {
+		background-color: rgba(241,186,31,0.5);
+
+		& .price-cell {
+			background-color: rgba(241,186,31,0.5);
+		}
+	}
+}
+
+
+td {
+	font-size: 0.8em;
+	padding: 0.6em;
+
+	&:first-child {
+		font-weight: 600;
+	}
+
+	& a {
+		color: @red;
+	}
+}
+
+th {
+	padding: 0.5em;
+	color: @white;
+	background-color: @darkgray;
+}
+
+.price-cell {
+	background-color: @lightgreen;
+	font-weight: 600;
+	transition: all 0.5s;
+
+}
+

@@ -2,6 +2,8 @@
 
 import * as banerAction from './banner.js';
 import * as popupGal from './popup-gallery.js';
+import * as tabs from './tabs.js';
+import * as accordion from './accordion.js';
 
 //Burger menu
 let burgerEl = document.querySelector('.burger');

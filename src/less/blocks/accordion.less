@@ -1,0 +1,33 @@
+.accordion {
+
+}
+
+	.accordion__item {
+		width: 100%;
+
+	}
+
+		.accordion__quest {
+			display: block;
+			padding: 0.7em;
+			margin-top: 0;
+			margin-bottom: 0.5em;
+			background-color: @lightgreen;
+			cursor: pointer;
+
+			&:hover {
+				background-color: @darkgreen;
+			}
+
+			&--active {
+				background-color: @green;
+			}
+		}
+
+		.accordion__answer {
+			display: none;
+
+			&--active {
+				display: block;
+			}
+		}
