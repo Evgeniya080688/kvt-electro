@@ -44,9 +44,53 @@ th {
 }
 
 .price-cell {
+	position: relative;
 	background-color: @lightgreen;
 	font-weight: 600;
 	transition: all 0.5s;
 
+	&:before {
+		content: '';
+		position: absolute;
+		width: 1.5em;
+		height: 1.5em;
+		border: 0.1em solid @gray;
+		border-radius: 0.8em;
+		background-color: @lightgray;
+		right: 2em;
+		top: 0.2em;
+		box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+	}
+
+	&:after {
+		content: '₽';
+		position: absolute;
+		width: 1.5em;
+		height: 1.5em;
+		right: 1.6em;
+		top: 0.5em;
+	}
+
 }
 
+.table-price {
+	margin-top: 1.5em;
+	margin-right: 1em;
+
+	& td {
+		font-size: 1em;
+	}
+	
+}
+
+.table-size {
+	margin-top: 1.5em;
+
+	& td {
+		font-size: 1em;
+
+		&:first-child {
+			font-weight: 400;
+		}
+	}
+}

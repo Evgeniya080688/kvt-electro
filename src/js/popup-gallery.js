@@ -15,6 +15,11 @@ if (document.querySelector('.media-list') !== null) {
 	let index = 0;
 	let curImg = galleryListArr[index].querySelector('.media-list__img');
 
+	if (galleryListArr.length<2) {
+		arrowRightEl.style.display = "none";
+		arrowLeftEl.style.display = "none";
+	}
+
 	popupCloseEl.addEventListener( "click", function(event) {
 		modalEl.style.display = "none";
 	});
@@ -95,7 +100,6 @@ if (document.querySelector('.list-video') !== null) {
 	
 	let popupVideo = document.querySelector('iframe');
 	let popupVideoCloseEl = document.querySelector('.popup-video__close');
-	let index = 0;
 	
 	for (let i=0; i < videoListArr.length; i++) {
 		videoListArr[i].addEventListener( "click", function(e) {

@@ -18,32 +18,51 @@
 			width: 3em;
 			height: 3em;
 			text-align: center;
+			transform: skewX(-20deg);
+			background-color: @black;
 			cursor: pointer;
+
+			&:hover {
+				background-color: @darkgray;
+				
+
+				&:after {
+					background-color: @adultyellow;
+					right: 0.3em;
+				}
+
+				&:before {
+					color: @darkgray;
+					right: 0;
+				}
+			}
 
 			&:before {
 				content: "3D";
 				position: absolute;
 				z-index: 2;
-				left: -0.3em;
-				top: 0;
+				top: -0.2em;
+				right: -0.5em;
 				width: 3em;
 				height: 3em;
 				font-size: 1.2em;
 				line-height: 2.5em;
-				font-weight: 600;				
-				color: @darkyellow;
+				font-weight: 600;	
+				//transform: skewX(20deg);
+				transition: all 0.5s;			
+				color: @black;
 			}
 
 			&:after {
 				content: "";
 				position: absolute;
 				z-index: 0;
-				right: 0;
-				top: 0;
+				right: -0.3em;
+				top: -0.3em;
 				width: 3em;
 				height: 3em;
-				transform: skewX(-20deg);
-				background-color: rgba(255,221,20,0.7);	
+				//transform: skewX(-20deg);
+				background-color: rgba(255,221,20,1);	
 				transition: all 0.5s;
 
 				&:hover {
@@ -138,3 +157,81 @@
 		.product-info__svg {
 
 		}
+
+		.product-info__tables {
+			display: flex;
+		}
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.card__item {
+		width: 31%;
+		box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+		margin-bottom: 1em;
+		padding: 0.7em;
+
+		& img {
+			margin-right: 0;
+			margin-bottom: 0;
+			width: 100%;
+		}
+	}
+		.card__subtitle {
+			font-size: 1.1em;
+			text-align: center;
+			color: @green;
+		}
+
+		.card-list {
+			.list-reset;
+		}
+
+			.card-field {
+				display: flex;
+				flex-direction: row;
+				font-size: 0.9em;
+				line-height: 1.8em;
+				border-bottom: 0.1em solid @gray;
+
+				& .card-field__title {
+					font-weight: 600;
+					flex: 1;
+					text-align: right;
+					margin-right: 1.5em;
+
+				}
+
+				& .card-field__content {
+					flex: 1;
+					color: @darkgray;
+				}
+
+				& ul {
+					.list-reset;
+					display: flex;
+					flex-direction: row;
+					justify-content: left;
+					align-items: center;
+
+					& li {
+						font-size: 0.9em;
+						line-height: 1em;
+						height: 1.1em;
+						font-weight: 600;
+						padding: 0.3em;
+						color: @white;
+						background-color: @darkgray;
+						margin-right: 0.5em;
+						margin-top: 0.1em;
+					}
+				}
+			}
+
+		svg.barcode {
+			width: 100%;
+			height: auto;
+		}
+}
