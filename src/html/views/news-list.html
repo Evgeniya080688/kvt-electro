@@ -1,0 +1,152 @@
+<% var data = {
+  title: "Продукция КВТ",
+  author: "Торговый Дом КВТ"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">
+	<div class="breadcrumbs">
+        <a target="_self" href="./index.html">Главная</a>
+
+        <a class="active" href="#">Новости</a>
+    </div>
+
+	<h1>Новости, акции, события</h1>
+
+	<div class="news-list">
+		<article class="news-item">
+			<span class="news-item__data">23.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/ctb8.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка пресс-клещей</h2>
+				<span class="news-item__description">Новый набор со сменными матрицами, уже в продаже!</span>
+			</a>	
+		</article>		
+
+		<article class="news-item">
+			<span class="news-item__data">22.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/kg-vep.jpg" title="Герметик" alt="Герметик8">
+				<h2 class="news-item__title">Герметик</h2>
+				<span class="news-item__description">Новый Герметик!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">21.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/nk.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка клеммы</h2>
+				<span class="news-item__description">Клеммы уже в продаже!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">20.07.2020</span>
+
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/pktr.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка стяжек</h2>
+				<span class="news-item__description">ПКТр уже в продаже!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">19.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/screwdrivers_master_hit.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка отвертки</h2>
+				<span class="news-item__description">Новый набор ударного инструмента!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">18.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/om-4.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка очков</h2>
+				<span class="news-item__description">Одевай очки при работе!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">19.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/screwdrivers_master_hit.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка отвертки</h2>
+				<span class="news-item__description">Новый набор ударного инструмента!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">23.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/ctb8.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка пресс-клещей</h2>
+				<span class="news-item__description">Новый набор со сменными матрицами, уже в продаже!</span>
+			</a>	
+		</article>		
+
+		<article class="news-item">
+			<span class="news-item__data">22.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/kg-vep.jpg" title="Герметик" alt="Герметик8">
+				<h2 class="news-item__title">Герметик</h2>
+				<span class="news-item__description">Новый Герметик!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">21.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/pm.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Новинка ПМ</h2>
+				<span class="news-item__description">Успей купить!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">21.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/kss-float.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Водоплавающая</h2>
+				<span class="news-item__description">Успей купить!</span>
+			</a>	
+		</article>
+
+		<article class="news-item">
+			<span class="news-item__data">21.07.2020</span>
+			<a class="news-item__link" href="./news-item.html" taget="_self" title="Ссылка на новость">
+				<img class="news-item__ico" src="img/prod/sks-p_red.jpg" title="CTB8" alt="CTB8">
+				<h2 class="news-item__title">Красна девица</h2>
+				<span class="news-item__description">Успей купить!</span>
+			</a>	
+		</article>
+	</div>
+
+	<div class="paginator-pages">
+		<div class="paginator-pages__item page-arrow__left">
+			&larr;
+		</div>	
+		<div class="paginator-pages__item  paginator-pages__item--active">
+			1
+		</div>
+		<div class="paginator-pages__item">
+			2
+		</div>
+		<div class="paginator-pages__item">
+			3
+		</div>
+		<div class="paginator-pages__item">
+			4
+		</div>
+		<div class="paginator-pages__item">
+			5
+		</div>
+		<div class="paginator-pages__item page-arrow__left">
+			&rarr;
+		</div>
+	</div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>	

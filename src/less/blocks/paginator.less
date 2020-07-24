@@ -1,0 +1,30 @@
+.paginator-pages {
+	display: flex;
+	margin-bottom: 1em;
+	flex-wrap: wrap;
+}
+
+	.paginator-pages__item {
+		line-height: 3em;
+		width: 3em;
+		height: 3em;
+		margin-right: 0.5em;
+		margin-bottom: 1em;
+		text-align: center;
+		color: @darkgray;
+		font-weight: 600;
+		background-color: @gray;
+		transition: all 0.5s;
+		cursor: pointer;
+		
+		&--active {
+			background-color: @adultyellow;
+			color: @black;
+			cursor: auto;
+		}
+
+		&:hover {
+			background-color: @darkgray;
+			color: @white;
+		}
+	}
