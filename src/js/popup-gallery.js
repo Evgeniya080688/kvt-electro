@@ -39,7 +39,7 @@ if (document.querySelector('.media-list') !== null) {
     	}
     	curImg = galleryListArr[index].querySelector('.media-list__img');
     	popupImg.src = curImg.src;
-    	popupTitle.innerHTML = "" + curImg.title;
+    	popupTitle.innerHTML = "" + (index+1) + "/" +  galleryListArr.length + " - " + curImg.title;;
 
     	
     });
@@ -52,7 +52,7 @@ if (document.querySelector('.media-list') !== null) {
     	}
     	curImg = galleryListArr[index].querySelector('.media-list__img');
     	popupImg.src = curImg.src;
-    	popupTitle.innerHTML = "" + curImg.title;
+    	popupTitle.innerHTML = "" + (index+1) + "/" +  galleryListArr.length + " - " + curImg.title;;
     });
 
     arrowLeftEl.addEventListener("click", function() {
@@ -77,7 +77,7 @@ if (document.querySelector('.media-list') !== null) {
 		    popupImg.src = curImg.src;
 		    popupImg.alt = curImg.alt;
 		    popupImg.title = curImg.title;
-		    popupTitle.innerHTML = "" + curImg.title;
+		    popupTitle.innerHTML = "" + (index+1) + "/" +  galleryListArr.length + " - " + curImg.title;
 		    //настройки размеров
 		    popupImg.style.maxHeight  = (0.7*(screen.height)) +"px";
 		    popupImg.style.maxWidth = (0.7*(screen.width)) + "px";

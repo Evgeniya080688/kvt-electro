@@ -1,0 +1,40 @@
+<% var data = {
+  title: "Продукция КВТ",
+  author: "Торговый Дом КВТ"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">
+	<div class="breadcrumbs">
+        <a target="_self" href="./index.html">Главная</a>
+
+        <a target="_self" href="./news-list.html">Новости</a>
+
+        <a class="active" href="#">Новая сумка монтажника</a>
+    </div>
+
+	
+
+	<section class="news-content">
+		<div class="news-content__img">
+			<img src="./img/prod/s-21_2.jpg" title="Сумка монтажника С-21" alt="Сумка монтажника С-21">
+		</div>		
+
+		<div class="news-content__description description">
+			<h1>Новая сумка монтажника</h1>
+
+			<p>Новая жесткая сумка С-21 (КВТ) с металлической рукояткой, откидными клапанами и несколькими десятками карманов и крепежных элементов - разместит больше инструмента, чем у вас есть! Благодаря плечевому ремню и мягким вставкам на тыльной стороне сумки переноска до 25 килограммов не вызывает дискомфорта.</p>
+			
+			<h2>Похожие новости</h2>
+			<ul class="description__list">
+				<li class="description__item"><a href="./news-item.html">Профессиональный инструмент для всех!</a></li>
+				<li class="description__item"><a href="./news-item.html">Металлорукав 18 и 22 мм</a></li>
+				<li class="description__item"><a href="./news-item.html">Новый вид самоизоляции</a></li>
+			</ul>
+
+			<a class="description__comeback" title="Назад" href="./news-list.html">&larr; К списку новостей</a>
+		</div>		
+	</section>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>	
