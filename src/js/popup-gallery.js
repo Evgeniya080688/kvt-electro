@@ -1,7 +1,7 @@
 "use strict";
 
-if (document.querySelector('.media-list') !== null) {
-	let galleryListEl = document.querySelector('.media-list').children;
+if (document.querySelector('.media-list__item') !== null) {
+	let galleryListEl = document.querySelectorAll('.media-list__item');
 	let galleryListArr = Array.prototype.slice.call(galleryListEl);
 	//let photoItemEl = document.querySelector('.media-list__item');
 
@@ -125,3 +125,4 @@ if (document.querySelector('.list-video') !== null) {
 		modalVideoEl.style.display = "none";
 	});
 }
+	
