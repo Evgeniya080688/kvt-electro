@@ -1,0 +1,151 @@
+<% var data = {
+  title: "Завод КВТ",
+  author: "Торговый Дом КВТ"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">
+	<div class="breadcrumbs">
+        <a target="_self" href="./index.html">Главная</a>
+
+        <a class="active" href="#">Контакты</a>
+    </div>
+
+	<h1>Контакты</h1>
+
+	<section>
+		<div class="page-title">
+			<a>
+				<h2>С вами работают:</h2>
+			</a>
+			<div class="page-title__background"></div>
+			<div class="page-title__background2"></div>
+		</div>
+
+		<div class="contacts-list contacts">
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/kuznetcov1.jpg" alt="Кузнецов Игорь" title="Кузнецов Игорь">
+				<span class="contacts__name">Кузнецов Игорь</span>
+				<span class="contacts__position">руководитель отдела продаж</span>
+				<span class="contacts__mail">kuznetsov.iv</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/ohrimenko_nata.jpg" alt="Охрименко Наталья" title="Охрименко Наталья">
+				<span class="contacts__name">Охрименко Наталья</span>
+				<span class="contacts__position">старший менеджер по продажам</span>
+				<span class="contacts__mail">ohrimenko.nv</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/miholap.jpg" alt="Михолап Наталия" title="Михолап Наталия">
+				<span class="contacts__name">Михолап Наталия</span>
+				<span class="contacts__position">начальник отдела ВЭД</span>
+				<span class="contacts__mail">micholap.nv</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/karina1.jpg" alt="Бороздина Карина" title="Бороздина Карина">
+				<span class="contacts__name">Бороздина Карина</span>
+				<span class="contacts__position">специалист отдела ВЭД</span>
+				<span class="contacts__mail">borozdina.kb</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/viktoriya.jpg" alt="Животовская Виктория" title="Животовская Виктория">
+				<span class="contacts__name">Животовская Виктория</span>
+				<span class="contacts__position">специалист отдела ВЭД</span>
+				<span class="contacts__mail">zhivotovskaya.vs</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/kashtanovanatal_ya.jpg" alt="Каштанова Наталья" title="Каштанова Наталья">
+				<span class="contacts__name">Каштанова Наталья</span>
+				<span class="contacts__position">специалист по ВЭД</span>
+				<span class="contacts__mail">kashtanova.ne</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/alexey.jpg" alt="Алексей Рожков" title="Алексей Рожков">
+				<span class="contacts__name">Рожков Алексей</span>
+				<span class="contacts__position">менеджер по региональному развитию</span>
+				<span class="contacts__mail">rozhkov.ak</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/volkova1.jpg" alt="Волкова Венера" title="Волкова Венера">
+				<span class="contacts__name">Волкова Венера</span>
+				<span class="contacts__position">менеджер по продажам</span>
+				<span class="contacts__mail">volkova.va</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/cherenkova1.jpg" alt="Черенкова Анна" title="Черенкова Анна">
+				<span class="contacts__name">Черенкова Анна</span>
+				<span class="contacts__position">менеджер по продажам</span>
+				<span class="contacts__mail">cherenkova.av</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/borisova_n.jpg" alt="Борисова Анастасия" title="Борисова Анастасия">
+				<span class="contacts__name">Борисова Анастасия</span>
+				<span class="contacts__position">менеджер по продажам</span>
+				<span class="contacts__mail">borisova.aa</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/samofatova_sveta1.jpg" alt="Самофатова Светлана" title="Самофатова Светлана">
+				<span class="contacts__name">Самофатова Светлана</span>
+				<span class="contacts__position">менеджер по продажам</span>
+				<span class="contacts__mail">samofatova.sa</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/manaenkova_t.jpg" alt="Зыкова Татьяна" title="Зыкова Татьяна">
+				<span class="contacts__name">Зыкова Татьяна</span>
+				<span class="contacts__position">менеджер по продажам</span>
+				<span class="contacts__mail">manaenkova.ta</span>
+			</div>
+
+			<div class="contacts__item">
+				<img class="contacts__img" src="./img/contacts/paladina_evg.jpg" alt="Паладина Евгения" title="Паладина Евгения">
+				<span class="contacts__name">Паладина Евгения</span>
+				<span class="contacts__position">web-поддержка</span>
+				<span class="contacts__mail">paladina.em1</span>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="page-title">
+			<a>
+				<h2>Доставка</h2>
+			</a>
+			<div class="page-title__background"></div>
+			<div class="page-title__background2"></div>
+		</div>
+
+		<p>За нашими плечами многолетний опыт успешной работы на российском и зарубежном рынке электротехнической продукции. Находясь в непосредственной близости от производства, мы предоставляем нашим клиентам оперативную поставку продукции в любую точку России и ближнего зарубежья. Доставка может быть осуществлена удобным для вас способом:</p>
+		<ul class="description__list">
+			<li class="description__item">
+				<h3>Через филиалы транспортных компаний</h3>
+				<ul>
+					<li>ПЭК</li>
+					<li>ООО ЖелДорЭкспедиция</li>
+					<li>Деловые Линии</li>
+					<li>Энергия</li>
+				</ul>
+			</li>
+			<li class="description__item">
+				<h3>Самовывозом</h3>
+				<p>Вы можете забрать заказ самостоятельно с нашего склада. За консультацией обращайтесь к специалистам Торгового Дома «КВТ».</p>
+			</li>
+			<li class="description__item">
+				<h3>Собственным транспортом компании</h3>
+				<p>Наша компания готова организовать доставку вашего заказа собственным транспортом. Об условиях, сроках и стоимости доставки уточняйте дополнительно.</p>
+			</li>
+		</ul>		
+	</section>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>	
