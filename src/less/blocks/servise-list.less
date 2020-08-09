@@ -3,37 +3,54 @@
 	justify-content: space-around;
 	flex-wrap: wrap;
 	margin-top: 3em;
+	margin-bottom: 2em;
 	.list-reset;
 }
 
 	.service-list__item {
-		width: 16%;		
+		width: 12%;	
+		background-color: @white;	
+		transition: all 0.5s ease-out 0s;
 
 		& a {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			text-decoration: none;
-			transition: all 0.5s ease-out 0s;
+			text-decoration: none;	
+			transition: all 0.5s ease-out 0s;		
 
 			& p {
+				font-size: 0.8em;
 				text-align: center;
 				text-decoration: none;
-				color: @black;
+				color: @darkgray;
 			}
 			
 
 			& img {
 				height: 5em;
+				margin-top: 1em;
+				opacity: 0.5;
+				transition: all 0.5s ease-out 0s;
 			}
 
-			&:hover {
-				transform: scale(1.2);
-			}
+			
 
 			&:hover p{
 				color: @darkgray;
 				
 			}
 		}	
+
+		&:hover {
+			transform: scale(1.2);
+
+			& a img {
+				opacity: 0.8;
+			}
+
+			& a p {
+				color: @black;
+			}
+		}
 	}

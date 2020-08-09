@@ -1,0 +1,58 @@
+<% var data = {
+  title: "Завод КВТ",
+  author: "Торговый Дом КВТ"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">
+	<div class="breadcrumbs">
+        <a target="_self" href="./index.html">Главная</a>
+
+        <a class="active" href="#">Контакты</a>
+    </div>
+
+	<h1>Каталоги продукции</h1>
+
+	<section>
+		<ul class="catalogues__list">
+			<li class="catalogues__item">
+				<a href="https://lib.net.ru/flipping/?pub=publish/Catalog_cablearm.pdf" target="blank">
+					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/cablearms_cover_face.jpg">
+					<span>Кабельная арматура и контактные соединения «КВТ» (2019-2020г.)</span>
+				</a>	
+			</li>
+			<li class="catalogues__item">
+				<a href="https://lib.net.ru/flipping/?pub=publish/Catalog_measure_kvt.pdf" target="blank">
+					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/cover_measure_kvt_face.jpg">
+					<span>Контрольно-измерительные приборы «КВТ» (2019г.)</span>
+				</a>	
+			</li>
+			<li class="catalogues__item">
+				<a href="https://lib.net.ru/flipping/?pub=publish/Catalog_fittingtools.pdf" target="blank">
+					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/fittingtools_cover_face.jpg">
+					<span>Ручной и слесарно-монтажный инструмент «КВТ» (2019г.)</span>
+				</a>	
+			</li>
+			<li class="catalogues__item">
+				<a href="https://lib.net.ru/flipping/?pub=publish/Catalog_Fortisflex.pdf" target="blank">
+					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/fortis_cover_face.jpg">
+					<span>Каталог «ФортисФлекс» (2019-2020г.)</span>
+				</a>	
+			</li>
+			<li class="catalogues__item">
+				<a href="https://lib.net.ru/flipping/?pub=publish/Catalog_thermo.pdf" target="blank">
+					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/thermo_cover_face.jpg">
+					<span>Ассортиментный каталог кабельных муфт и термоусаживаемой трубки «КВТ» (2020-2022г.)</span>
+				</a>	
+			</li>
+			<li class="catalogues__item">
+				<a href="https://lib.net.ru/flipping/?pub=publish/Catalog_tools.pdf" target="blank">
+					<img alt="Каталог продукции" title="Каталог продукции" src="img/covers_catalogues/tools_cover_face.jpg">
+					<span>Электромонтажный инструмент «КВТ» (2019-2020г.)</span>
+				</a>	
+			</li>
+		</ul>
+	</section>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>	

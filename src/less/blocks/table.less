@@ -45,6 +45,7 @@ th {
 
 .price-cell {
 	position: relative;
+	width: 15%;
 	background-color: @lightgreen;
 	font-weight: 600;
 	transition: all 0.5s;
@@ -64,6 +65,7 @@ th {
 
 	&:after {
 		content: '₽';
+		font-family: "Helvetica Neue", sans-serif;
 		position: absolute;
 		width: 1.5em;
 		height: 1.5em;
@@ -73,6 +75,10 @@ th {
 
 }
 
+.price-cell {
+	width: 15%;
+}
+
 .table-price {
 	margin-top: 1.5em;
 	margin-right: 1em;
@@ -80,11 +86,19 @@ th {
 	& td {
 		font-size: 1em;
 	}
+
+	& .price-cell {
+		width: auto;
+	}
 	
 }
 
 .table-size {
 	margin-top: 1.5em;
+
+	& th {
+		font-size: 1em;
+	}
 
 	& td {
 		font-size: 1em;
