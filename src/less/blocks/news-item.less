@@ -19,6 +19,7 @@
 
 		.description__list {
 				.list-reset;
+				font-size: 0.9em;
 				transition: all 0.5s;
 			}
 
@@ -30,7 +31,7 @@
 
 					& a {
 						text-decoration: none;
-						color: @darkgray;
+						color: @black;
 
 						&:hover {
 							color: @darkyellow
@@ -67,13 +68,14 @@
 				height: 2.2em;
 				top: 0;
 				left: 0;
-				background-color: @green;
+				background-color: @gray;
 				transform: skewX(-20deg);
+				transition: all 1s ease-out 0s;
 			}
 
 			&:hover {
 				&:after {
-					background-color: @darkgreen;
+					background-color: @darkgray;
 				}
 			}
 			

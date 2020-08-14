@@ -9,11 +9,28 @@
 
 		.accordion__quest {
 			display: block;
-			padding: 0.7em;
+			position: relative;
+			font-size: 0.9em;
+			padding: 0.7em 0.7em 0.7em 2.6em;
 			margin-top: 0;
 			margin-bottom: 0.5em;
 			background-color: @lightgreen;
+			transition: all 0.5s;
 			cursor: pointer;
+
+			&:before {
+				content:"?";
+				position: absolute;
+				left: 0.7em;
+				top: 0.45em;
+				width: 1em;
+				height: 1em;
+				padding: 0.3em;
+				text-align: center;
+				//border: 0.1em solid @darkgreen;
+				border-radius: 1em;
+				background-color: @white;
+			}
 
 			&:hover {
 				background-color: @darkgreen;
@@ -26,6 +43,8 @@
 
 		.accordion__answer {
 			display: none;
+			padding: 0 0.7em;
+			font-size: 0.9em;
 
 			&--active {
 				display: block;
