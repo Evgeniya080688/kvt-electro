@@ -127,13 +127,13 @@
 							}
 
 							.main-nav__link:hover {
-								color: @white;
+								color: @darkgray;
 						    }
 
 							.main-nav__link:hover:before {
 								width: 100%;
 						        left: 0;
-						        background: @white;							
+						        background: @darkgray;							
 							}
 
 						.nav-item__submenu {
@@ -143,9 +143,9 @@
 							left: 0;
 							top: 0em;
 							z-index: 20;
-							width: 100%; 
-							background: rgb(111,74,5);							
-							background: linear-gradient(139deg, rgba(255,200,0,1)  0%, rgba(255, 232, 179,1) 46%, rgba(204,204,204,0.9) 90%);
+							width: 100%; 							
+							background-color: rgba(255,255,255,0.9);
+							box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
 							transition: all 0.5s ease-out 0s;
 							&--active {
 								display: flex;
@@ -171,9 +171,10 @@
 									.submenu__title a {
 										text-decoration: none;
 										color: @black;
+										transition: all 0.5s;
 
 										&:hover {
-											color: @darkgray;
+											color: @darkyellow;
 										}
 									}
 
@@ -184,8 +185,7 @@
 									width: 90%;
 									.list-reset;
 									padding-left: 3em;
-									max-height: 65em;
-									height: 35em;
+									height: 45em;
 									
 								}
 
@@ -193,8 +193,8 @@
 										display: block;
 										width: 30%;
 										font-size: 0.9em;
-										padding-top: 0.4em;
-										padding-bottom: 0.4em;
+										padding-top: 0.7em;
+										padding-bottom: 0.7em;
 										border-bottom: 0.1em solid @darkyellow;
 
 										&:last-child {
@@ -209,9 +209,10 @@
 											color: @black;
 											width: 100%;
 											height: 100%;
+											transition: all 0.6s;
 
 											&:hover {
-												color: @darkgray;
+												color: @darkyellow;
 											}
 										}
 
@@ -221,6 +222,7 @@
 
 								.submenu__price, .submenu__shop {
 									margin-bottom: 1em;
+									margin-top: 0.5em;
 									padding-left: 0em;
 									position: relative;
 
@@ -237,9 +239,10 @@
 									text-decoration: none;
 									padding-left: 2em;
 									color: @black;
+									transition: all 0.5s;
 
 									&:hover {
-										color: @darkgray;
+										color: @darkyellow;
 									}
 								}
 							
@@ -262,6 +265,11 @@
 										.catalogues-menu__item img {
 											width: 100%;
 											box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+											transition: all 0.5s;
+
+											&:hover {
+												box-shadow: 0px 0px 8px 2px rgba(255,200,0,0.8);
+											}
 										}
 
 						.submenu__close {
@@ -271,6 +279,17 @@
 							right: 0.1em;
 							width: 2em;
 							height: 2em;
+
+							&:hover {
+								&:before {
+									background-color: @darkyellow;
+								}
+
+								&:after {
+									background-color: @darkyellow;
+								}
+
+							}
 
 							&:before {
 								content: "";
@@ -282,6 +301,7 @@
 								height: 0.2em;
 								background-color: @black;
 								transform: rotate(45deg);
+								transition: all 0.5s;
 							}
 
 							&:after {
@@ -294,11 +314,10 @@
 								height: 0.2em;
 								background-color: @black;
 								transform: rotate(-45deg);
+								transition: all 0.5s;
 							}
 
-							&:hover {
-								cursor: pointer;
-							}
+							
 						}
 
 
@@ -394,7 +413,6 @@
 	.header-info {
 		position: relative;
 		height: 3.5em;
-		background: rgb(1,1,1);
 		background: linear-gradient(107deg, rgba(55,55,55,1) 0%, rgba(150,150,150,1) 39%, rgba(101,101,101,1) 72%, rgba(90,90,90,1) 100%, rgba(230,230,230,1) 100%);
 	}			
 
@@ -402,8 +420,8 @@
 			content: "";
 			position: absolute;
 			top: 0;
-			left: -1em;
-			width: 8.5em;
+			left: -3em;
+			width: 15.5em;
 			height: 3.5em;
 			background-color: @white;
 			border: 0.1em solid @white;
@@ -460,6 +478,7 @@
 					& a {
 						text-decoration: none;
 						color: @white;
+						transition: all 0.6s;
 
 						&:hover {
 							color: @adultyellow;
@@ -478,6 +497,7 @@
 						text-decoration: none;
 						color: @white;
 						margin-left: 1em;
+						transition: all 0.6s;
 					}
 
 					.header-tel__link:hover {
