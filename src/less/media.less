@@ -116,13 +116,17 @@
 
 			.header-info {
 				height: auto;
-			}	
+			}		
 
-			.header-info:after {
-				left: -2.9em;
-				width: 6.5em;
-				height: 6.5em;
-			}	
+				.header-info__back--white {
+					width: 5em;
+					height: 5.6em;
+				}	
+
+				.header-info__back--gray {
+					height: 5.5em;
+					width: 90%;
+				}	
 
 					.header-info__logo {		
 						top: 0.3em;
@@ -166,27 +170,10 @@
 							
 							}
 
-	/*footer*/
-		.page-footer__item {
-			width: 100%;
-			align-items: center;
-			margin-bottom: 0.75em;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		.page-footer__social {
-			justify-content: center;
-
-			.social__item {
-				margin-left: 0.25em;
-				margin-right: 0.25em;
-			}
-		}
-
 	/*baner*/
+		.main-baner {
+			margin-top: 0.4em;
+		}
 
 		.baner  {
 			max-height: 15em;
@@ -196,7 +183,8 @@
 
 				& img {
 					height: 80%;
-					margin-left: 0em;	
+					margin-left: 0;
+					left: 0;	
 				}
 			}	
 				
@@ -233,8 +221,13 @@
 			}
 
 			.baner__background3 {
-				top: -1em;
+				top: -1.5em;
 				left: 0em;
+			}
+
+			.baner__nav {
+				width: 3em;
+				height: 3em;
 			}
 
 			.baner__nav--left {
@@ -247,7 +240,27 @@
 
 			.baner__paginator {
 				bottom: 0.5em;
+			}						
+
+	/*footer*/
+		.page-footer__item {
+			width: 100%;
+			align-items: center;
+			margin-bottom: 0.75em;
+
+			&:last-child {
+				margin-bottom: 0;
 			}
+		}
+
+		.page-footer__social {
+			justify-content: center;
+
+			.social__item {
+				margin-left: 0.25em;
+				margin-right: 0.25em;
+			}
+		}
 
 	/*service-list*/
 		.service-list__item {
@@ -530,10 +543,14 @@
 			height: auto;
 		}	
 
-			.header-info:after {
-				left: -2em;
-				width: 6.5em;
-				height: 6.5em;
+			.header-info__back--white {
+				width: 5em;
+				height: 5.6em;
+			}	
+
+			.header-info__back--gray {
+				height: 5.5em;
+				width: 90%;
 			}	
 
 				.header-info__logo {		
@@ -547,7 +564,6 @@
 
 					.header-contacts__title {
 						padding: 0;
-						margin-right: 0;
 					}
 
 						.header-contacts__name {
@@ -558,6 +574,7 @@
 					.header-contacts__adress {
 						font-size: 0.9em;
 						line-height: 1.5em;
+						margin-left: 1em;
 					}
 
 				.header-tel {
@@ -565,6 +582,7 @@
 					align-items: flex-start;
 					font-size: 1em;
 					line-height: 1.5em;
+					margin-left: 1em;
 				}
 
 					.header-tel__link {
@@ -577,27 +595,11 @@
 					
 					}
 
-	/*footer*/
-		.page-footer__item {
-			width: 100%;
-			align-items: center;
-			margin-bottom: 0.75em;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		.page-footer__social {
-			justify-content: center;
-
-			.social__item {
-				margin-left: 0.25em;
-				margin-right: 0.25em;
-			}
-		}
-
 	/*baner*/
+
+		.main-baner {
+			margin-top: 0.1em;
+		} 
 
 		.baner  {
 			max-height: 15em;
@@ -607,7 +609,8 @@
 
 				& img {
 					height: 100%;
-					margin-left: 2em;	
+					margin-left: 2em;
+					left: 0;	
 				}
 			}	
 				
@@ -644,7 +647,7 @@
 			}
 
 			.baner__background3 {
-				top: -1em;
+				top: -1.5em;
 				left: 0em;
 			}
 
@@ -659,6 +662,27 @@
 			.baner__paginator {
 				bottom: 0.5em;
 			}
+
+	/*footer*/
+		.page-footer__item {
+			width: 100%;
+			align-items: center;
+			margin-bottom: 0.75em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.page-footer__social {
+			justify-content: center;
+
+			.social__item {
+				margin-left: 0.25em;
+				margin-right: 0.25em;
+			}
+		}
+
 
 	/*service-list*/
 		.service-list__item {
@@ -927,10 +951,6 @@
 			}
 		}	
 
-		.header-info:after {
-			width: 9em;
-		}
-
 		.header-contacts__title {
 			padding: 0;
 			margin-right: 0;
@@ -960,7 +980,11 @@
 
 	/*baner*/
 
-		.baner  {
+		.main-baner {
+			margin-top: 0;
+		} 		
+
+		.baner {
 
 			& .baner__picture {
 
@@ -1095,10 +1119,7 @@
 				.submenu__item {
 					width: 40%;
 				}
-
-		.header-info:after {
-			width: 15%;
-		}		
+		
 
 		.header-contacts__title {
 			padding: 0;
@@ -1126,6 +1147,11 @@
 				display: flex;
 				margin-left: 0em;
 			}	
+
+	/*baner*/ 
+	.main-baner {
+		margin-top: 0;
+	} 		
 
 	/*service-list*/
 		.service-list__item {
@@ -1168,9 +1194,6 @@
 		.news-item {
 			width: 27%;	
 		} 
-
-		
-
 }
 
 @media (min-width: @scr-max) {
@@ -1187,10 +1210,7 @@
 			margin-right: 2em;
 			justify-content: space-evenly;
 		}
-
-		.header-info:after {
-			width: 11em;
-		}	
+	
 
 	/*popup*/
 		.popup-video iframe {
@@ -1199,27 +1219,6 @@
 			height: 550px;
 		}
 
-}
-
-@media (min-width: 1401px) {
-
-	.header-info:after {
-			width: 14%;
-		}
-}
-
-@media (min-width: 1501px) {
-
-	.header-info:after {
-			width: 16%;
-		}
-}	
-
-@media (min-width: 1601px) {
-
-	.header-info:after {
-			width: 18%;
-		}
 }
 
 
