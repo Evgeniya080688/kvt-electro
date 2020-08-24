@@ -1,0 +1,122 @@
+<% var data = {
+  title: "Завод КВТ",
+  author: "Торговый Дом КВТ"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<div class="container">
+	<div class="breadcrumbs">
+        <a target="_self" href="./index.html">Главная</a>
+
+        <a class="active" href="#">О нас</a>
+    </div>
+
+    <section class="subsetions-links">
+		<a class="subsetions-links__item" href="./factory.html">Завод</a>
+		<a class="subsetions-links__item" href="./i_love_kaluga.html">Калуга - родной город КВТ</a>
+	</section>
+
+	<h1>О нас: цифры и факты</h1>
+
+	<section>
+		<div class="info-blocks">
+			<div class="info-blocks__item block">
+				<div class="block__front">
+					<img title="Торговый дом КВТ" alt="Торговый дом КВТ" src="./img/aboutus/td.jpg">
+					<div class="block__text">
+						<h2>Работаем с 2003 года</h2>
+					</div>
+					
+				</div>	
+
+				<div class="block__back">
+					<div class="block__text">
+						<p>За нашими плечами многолетний опыт успешной работы на российском и зарубежном рынке электротехнической продукции.</p>
+					</div>
+				</div>				
+			</div>
+
+			<div class="info-blocks__item block">
+				<div class="block__front">
+					<img title="Команда продаж КВТ" alt="Команда продаж КВТ" src="./img/aboutus/staff.jpg">
+					<div class="block__text">
+						<h2>Вас обслуживают</br> 12 специалистов</h2>
+					</div>
+					
+				</div>	
+
+				<div class="block__back">
+					<div class="block__text">
+						<p>Наши специалисты профессионально проработают вопросы любой сложности по подбору и эксплуатации электромонтажного инструмента и электротехнических изделий в самые сжатые сроки.</p>
+					</div>
+				</div>				
+			</div>
+
+			<div class="info-blocks__item block">
+				<div class="block__front">
+					<img title="Продукция КВТ" alt="Продукция КВТ" src="./img/aboutus/production.jpg">
+					<div class="block__text">
+						<h2>Ассортимент свыше 5000 наименований</h2>
+					</div>
+					
+				</div>	
+
+				<div class="block__back">
+					<div class="block__text">
+						<p>Вся продукция торговой марки «КВТ» проходит необходимые лабораторные испытания и соответствует требованиям стандартов ГОСТ, DIN и заводских ТУ.</p>
+					</div>
+				</div>				
+			</div>
+
+			<div class="info-blocks__item block">
+				<div class="block__front">
+					<img title="Автопарк КВТ" alt="Автопарк КВТ" src="./img/aboutus/auto.jpg">
+					<div class="block__text">
+						<h2>Собственный автопарк из 8 автомобилей</h2>
+					</div>
+					
+				</div>	
+
+				<div class="block__back">
+					<div class="block__text">
+						<p>Своевременное и оперативное обеспечение продукцией торговых представителей и клиентов.</p>
+					</div>
+				</div>				
+			</div>
+
+			<div class="info-blocks__item block">
+				<div class="block__front">
+					<img title="Партнеры КВТ" alt="Партнеры КВТ" src="./img/aboutus/organizations.jpg">
+					<div class="block__text">
+						<h2>С нами работают свыше 3000 организаций</h2>
+					</div>
+					
+				</div>	
+
+				<div class="block__back">
+					<div class="block__text">
+						<p>Более 15 лет ТД «КВТ» остается надежной компанией, строго выполняющей все коммерческие обязательства перед партнерами.</p>
+					</div>
+				</div>				
+			</div>
+
+			<div class="info-blocks__item block">
+				<div class="block__front">
+					<img title="Поставки КВТ" alt="Поставки КВТ" src="./img/aboutus/auto.jpg">
+					<div class="block__text">
+						<h2>Осуществляем свыше 100 поставок клиентам в день по всему миру</h2>
+					</div>
+					
+				</div>	
+
+				<div class="block__back">
+					<div class="block__text">
+						<p>Находясь в непосредственной близости от производства, мы предоставляем нашим клиентам оперативную поставку продукции в любую точку России и ближнего зарубежья.</p>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>	
