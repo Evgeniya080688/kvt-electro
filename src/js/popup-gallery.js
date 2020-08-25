@@ -79,9 +79,9 @@ if (document.querySelector('.media-list__item') !== null) {
 		    popupImg.title = curImg.title;
 		    popupTitle.innerHTML = "" + (index+1) + "/" +  galleryListArr.length + " - " + curImg.title;
 		    //настройки размеров
-		    popupImg.style.maxHeight  = (0.7*(screen.height)) +"px";
-		    popupImg.style.maxWidth = (0.7*(screen.width)) + "px";
-		    popupFigureEl.style.height  = (0.75*(screen.height)) +"px";
+		    popupImg.style.maxHeight  = (0.8*(screen.height)) +"px";
+		    popupImg.style.maxWidth = (0.95*(screen.width)) + "px";
+		    popupFigureEl.style.height  = (0.9*(screen.height)) +"px";
 		    arrowLeftEl.style.top = (0.35*(screen.height)) + "px";
 		    arrowRightEl.style.top = (0.35*(screen.height)) + "px";
 		    modalEl.style.height = (document.body.scrollHeight ) + "px";

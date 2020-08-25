@@ -11,6 +11,7 @@
 		height: 15em;
 		overflow: hidden;
 		margin-bottom: 2em;
+		cursor: pointer;
 	}
 
 		.block-quarter {
@@ -58,7 +59,7 @@
 		}
 
 	.block__front {
-		display: flex;
+		display: block;
 		width: 100%;
 		height: 15em;
 		position: absolute;
@@ -69,7 +70,7 @@
 	}
 
 	.block__back {
-		display: flex;
+		display: block;
 		width: 100%;
 		height: 15em;
 		position: absolute;
@@ -80,15 +81,27 @@
 		opacity: 0;
 	}
 
-	.block:hover {
-		& .block__front {
-			z-index: 2;
-			transform: rotateY(-180deg);
-		}
-
-		& .block__back {
-			z-index: 3;
-			transform: rotateY(0deg);
-			opacity: 1;
-		}
+	.block__front--active {
+		z-index: 2;
+		transform: rotateY(-180deg);
+		opacity: 0;
 	}
+
+	.block__back--active {
+		z-index: 3;
+		transform: rotateY(0deg);
+		opacity: 1;
+	}
+
+	// .block:hover {
+	// 	& .block__front {
+	// 		z-index: 2;
+	// 		transform: rotateY(-180deg);
+	// 	}
+
+	// 	& .block__back {
+	// 		z-index: 3;
+	// 		transform: rotateY(0deg);
+	// 		opacity: 1;
+	// 	}
+	// }
