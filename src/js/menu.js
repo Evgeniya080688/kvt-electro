@@ -1,8 +1,11 @@
+"use strict";
+
 //Burger menu
 let burgerEl = document.querySelector('.burger');
 let menuEl = document.querySelector('.main-nav__list');
 let mainMenuEl = document.querySelector('.header__menu');
 let headerEl = document.querySelector('.main-header');
+
 
 function actionBurgerMenu() {
 	this.classList.toggle('main-nav__burger--active');
@@ -25,6 +28,24 @@ function openProdList(e) {
 }
 
 prodNavEl.addEventListener("click", openProdList);
+
+window.addEventListener("click", function(event) {
+		
+	if (prodListEl.classList.contains('nav-item__submenu--active')) {
+		let target = event.target;
+
+		let xCoord = (document.documentElement.clientWidth - prodListEl.offsetWidth)/2;
+		let yCoord = prodListEl.offsetHeight;		
+
+		if (( ((event.clientX > 0) && (event.clientX < xCoord)) || (event.clientX > prodListEl.offsetWidth + xCoord) ) 
+			|| ( event.clientY > yCoord )) {
+				prodListEl.classList.remove('nav-item__submenu--active');
+		}
+		 
+
+	}
+	
+});
 
 prodCloseBtn.addEventListener("click", function() {
 	prodListEl.classList.remove('nav-item__submenu--active');

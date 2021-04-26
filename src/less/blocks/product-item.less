@@ -88,24 +88,59 @@
 		}
 
 			.info-icons__item {
+				position: relative;
 				width: 3.5em;
 				height: 3.5em;
 				padding: 0.5em;
 				margin: 0.5em 0.5em 0.5em 0 ;
 				background-color: @lightgray;
 				transition: all 0.5s;
+				color: @darkgray;
 
 				&:hover {
 					background-color: @adultyellow;
+					& svg {
+						fill: @darkgray;
+					}
 				}
 
 				& img {
 					width: 100%;
 				}
+
+				& svg {
+					position: absolute;
+					top: 0.5em;
+					width: 80%;
+					height: 80%;
+					fill: rgb(27,46,55);
+				}
 			}
 
 		.product-info__propeties {
 			.list-reset;
+
+			& ul {
+				.list-reset;
+
+				& li {
+					padding-left: 1.5em;
+					position: relative;
+					line-height: 1.2em;
+					margin-bottom: 0.7em;
+
+					&:before {
+						content: "";
+						position: absolute;
+						top: 0.3em;
+						left: 0;
+						width: 0.5em;
+						height: 0.5em;
+						background-color: @darkgray;
+						transform: skewX(-20deg);
+					}
+				}
+			}
 		}
 
 			.product-info__item {

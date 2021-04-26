@@ -50,6 +50,7 @@ if (document.querySelector('.media-list__item') !== null) {
     	} else {
     		index = 0;
     	}
+    	
     	curImg = galleryListArr[index].querySelector('.media-list__img');
     	popupImg.src = curImg.src;
     	popupTitle.innerHTML = "" + (index+1) + "/" +  galleryListArr.length + " - " + curImg.title;;
