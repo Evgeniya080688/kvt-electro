@@ -374,6 +374,16 @@
 			word-wrap: break-word;
 		}
 
+		.price-cell {
+			&:before {
+				right: 0;
+			}
+			&:after {
+				width: 0.6em;
+				right: 0.5em;
+			}
+		}
+
 	/*tabs*/
 		.captions {
 			padding: 0.4em;
@@ -451,6 +461,8 @@
 		.attention-block {
 			width: 90%;
 		}
+
+	
 }
 
 @media (min-width: @scr-sm) and (max-width: 768px) {
@@ -816,6 +828,16 @@
 			padding-top: 0.5em;
 			padding-bottom: 0.5em;
 			word-wrap: break-word;
+		}
+
+		.price-cell {
+			&:before {
+				right: 0;
+			}
+			&:after {
+				width: 0.6em;
+				right: 0.5em;
+			}
 		}
 
 	/*tabs*/
