@@ -22,6 +22,10 @@ if (document.querySelector('.info-blocks__item') !== null) {
 
 
 
+
+
+
+
     
 
 
