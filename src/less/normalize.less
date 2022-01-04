@@ -23,7 +23,14 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
+}
+ 
+main {
+  flex: 1;
 }
 
 /**
@@ -341,3 +348,9 @@ template {
 [hidden] {
   display: none;
 }
+
+main {
+  min-height: 100%;
+}
+
+
