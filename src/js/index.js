@@ -1,13 +1,16 @@
-"use strict";
-
-import * as menu from './menu.js';
-import * as banerAction from './banner.js';
-import * as popupGal from './popup-gallery.js';
-import * as tabs from './tabs.js';
-import * as accordion from './accordion.js';
+import {getMenu} from './menu.js';
+import {getBunner} from './banner.js';
+import {getPopup} from './popup-gallery.js';
+import {getTabs} from './tabs.js';
+import {getAccordeon} from "./accordion.js";
 import * as barcode from './JsBarcode.all.min.js';
 
 JsBarcode(".barcode").init();
+getAccordeon();
+getTabs();
+getPopup();
+getBunner();
+getMenu();
 
 if (document.querySelector('.info-blocks__item') !== null) {
 	let blocks = document.querySelectorAll('.info-blocks__item');
