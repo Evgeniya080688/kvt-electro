@@ -46,7 +46,7 @@ const getMenu = () => {
 
 //Stiky menu
 	window.addEventListener('scroll', function() {
-		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		var scrollTop = window.scrollY || document.documentElement.scrollTop;
 		if ((scrollTop > headerEl.offsetHeight) &&
 			!(prodListEl.classList.contains('nav-item__submenu--active')) &&
 			!(burgerEl.classList.contains('main-nav__burger--active'))	) {
