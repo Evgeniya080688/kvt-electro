@@ -7,7 +7,7 @@
     "dev": "webpack --config webpack.dev.js --watch --open",
     "start": "webpack-dev-server --config webpack.dev.js --watch --open",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint js/"
+    "lint": "eslint src/js/"
   },
   "dependencies": {},
   "devDependencies": {
