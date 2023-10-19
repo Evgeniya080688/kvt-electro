@@ -117,7 +117,7 @@ const getPopup = () => {
 
         //настройки содержимого
         popupVideo.src = this.href;
-        modalVideoEl.style.height = (document.body.scrollHeight) + 'px';
+        modalVideoEl.style.height = `${document.body.scrollHeight}px`;
 
         document.documentElement.scrollTop = 0;
       });
@@ -135,6 +135,7 @@ const getPopup = () => {
     });
   }
 
+  //для вывода 3д в модальном окне
   if (document.querySelector('.media-3d__link') !== null) {
     const link3dEl = document.querySelector('.media-3d__link');
     const modalVideoEl = document.querySelector('.popup-video');
@@ -147,7 +148,7 @@ const getPopup = () => {
 
       //настройки содержимого
       popupVideo.src = this.href;
-      modalVideoEl.style.height = (document.body.scrollHeight) + 'px';
+      modalVideoEl.style.height = `${document.body.scrollHeight}px`;
 
       document.documentElement.scrollTop = 0;
     });
