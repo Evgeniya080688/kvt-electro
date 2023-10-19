@@ -1,74 +1,84 @@
+let galleryListEl = null;
+let galleryListArr = null;
+
+let modalEl = null;
+let popupFigureEl = null;
+let popupImg = null;
+let popupTitle = null;
+let popupCloseEl = null;
+let arrowRightEl = null;
+let arrowLeftEl = null;
+let curImg = null;
+let index = 0;
+
+const closeModalByDefaltClick = (evt) => {
+  const target = evt.target;
+  if ((target !== popupImg) && (target !== arrowRightEl) && (target !== arrowLeftEl)) {
+    modalEl.style.display = 'none';
+  }
+};
+
+const closeModalByBtnClick = function() {
+  modalEl.style.display = 'none';
+};
+
+const flipRight = function() {
+  if (index < galleryListArr.length - 1) {
+    index++;
+  } else {
+    index = 0;
+  }
+  curImg = galleryListArr[index].querySelector('.media-list__img');
+  popupImg.src = curImg.src;
+  popupTitle.innerHTML = `${index+1}/${galleryListArr.length} - ${curImg.title}`;
+};
+
+const flipLeft = function() {
+  if (index > 0) {
+    index--;
+  } else {
+    index = galleryListArr.length - 1;
+  }
+
+  curImg = galleryListArr[index].querySelector('.media-list__img');
+  popupImg.src = curImg.src;
+  popupTitle.innerHTML = `${index-1}/${galleryListArr.length} - ${curImg.title}`;
+};
+
 const getPopup = () => {
   if (document.querySelector('.media-list__item') !== null) {
-    const galleryListEl = document.querySelectorAll('.media-list__item');
-    const galleryListArr = Array.prototype.slice.call(galleryListEl);
-    //let photoItemEl = document.querySelector('.media-list__item');
+    galleryListEl = document.querySelectorAll('.media-list__item');
+    galleryListArr = Array.prototype.slice.call(galleryListEl);
 
-    const modalEl = document.querySelector('.popup');
-    const popupFigureEl = document.querySelector('.popup__figure');
-    const popupImg = document.querySelector('.popup__img');
-    const popupTitle = document.querySelector('.popup__figcaption');
-    const popupCloseEl = document.querySelector('.popup__close');
-    const arrowRightEl = document.querySelector('.arrow__right');
-    const arrowLeftEl = document.querySelector('.arrow__left');
-    let index = 0;
-    let curImg = galleryListArr[index].querySelector('.media-list__img');
+    modalEl = document.querySelector('.popup');
+    popupFigureEl = document.querySelector('.popup__figure');
+    popupImg = document.querySelector('.popup__img');
+    popupTitle = document.querySelector('.popup__figcaption');
+    popupCloseEl = document.querySelector('.popup__close');
+    arrowRightEl = document.querySelector('.arrow__right');
+    arrowLeftEl = document.querySelector('.arrow__left');
+    curImg = galleryListArr[index].querySelector('.media-list__img');
 
     if (galleryListArr.length < 2) {
       arrowRightEl.style.display = 'none';
       arrowLeftEl.style.display = 'none';
     }
 
-    popupCloseEl.addEventListener('click', function() {
-      modalEl.style.display = 'none';
-    });
+    popupCloseEl.addEventListener('click', closeModalByBtnClick);
 
-    modalEl.addEventListener('click', function(event) {
-      const target = event.target;
-      if ((target !== popupImg) && (target !== arrowRightEl) && (target !== arrowLeftEl)) {
-        modalEl.style.display = 'none';
-      }
-    });
+    modalEl.addEventListener('click', (evt) => {closeModalByDefaltClick(evt);});
 
-    arrowRightEl.addEventListener('click', function() {
-      if (index < galleryListArr.length - 1) {
-        index++;
-      } else {
-        index = 0;
-      }
-      curImg = galleryListArr[index].querySelector('.media-list__img');
-      popupImg.src = curImg.src;
-      popupTitle.innerHTML = '' + (index + 1) + '/' + galleryListArr.length + ' - ' + curImg.title;
-    });
+    arrowRightEl.addEventListener('click', flipRight);
 
-    popupImg.addEventListener('click', function() {
-      if (index < galleryListArr.length - 1) {
-        index++;
-      } else {
-        index = 0;
-      }
+    arrowLeftEl.addEventListener('click', flipLeft);
 
-      curImg = galleryListArr[index].querySelector('.media-list__img');
-      popupImg.src = curImg.src;
-      popupTitle.innerHTML = '' + (index + 1) + '/' + galleryListArr.length + ' - ' + curImg.title;
-    });
+    popupImg.addEventListener('click', flipRight);
 
-    arrowLeftEl.addEventListener('click', function() {
-      if (index > 0) {
-        index--;
-      } else {
-        index = galleryListArr.length - 1;
-      }
-
-      curImg = galleryListArr[index].querySelector('.media-list__img');
-      popupImg.src = curImg.src;
-      popupTitle.innerHTML = '' + curImg.title;
-    });
 
     for (let i = 0; i < galleryListArr.length; i++) {
-      galleryListArr[i].addEventListener('click', function(event) {
+      galleryListArr[i].addEventListener('click', function(evt) {
         index = i;
-        event.preventDefault();
+        evt.preventDefault();
         modalEl.style.display = 'flex';
         curImg = galleryListArr[i].querySelector('.media-list__img');
         //настройки содержимого
