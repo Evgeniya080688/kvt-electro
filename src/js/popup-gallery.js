@@ -18,6 +18,27 @@ const closeModalByDefaltClick = (evt) => {
   }
 };
 
+const openImageInModal = (evt, i) => {
+  index = i;
+  evt.preventDefault();
+  modalEl.style.display = 'flex';
+  curImg = galleryListArr[i].querySelector('.media-list__img');
+  //настройки содержимого
+  popupImg.src = curImg.src;
+  popupImg.alt = curImg.alt;
+  popupImg.title = curImg.title;
+  popupTitle.innerHTML = `${(index + 1)}/${galleryListArr.length}-${curImg.title}`;
+  //настройки размеров
+  popupImg.style.maxHeight = `${(0.8 * (screen.height))}px`;
+  popupImg.style.maxWidth = `${(0.95 * (screen.width))}px`;
+  popupFigureEl.style.height = `${(0.9 * (screen.height))}px`;
+  arrowLeftEl.style.top = `${(0.40 * (screen.height))}px`;
+  arrowRightEl.style.top = `${(0.40 * (screen.height))}px`;
+  modalEl.style.height = `${(document.body.scrollHeight)}px`;
+
+  document.documentElement.scrollTop = 0;
+};
+
 const closeModalByBtnClick = function() {
   modalEl.style.display = 'none';
 };
@@ -42,7 +63,7 @@ const flipLeft = function() {
 
   curImg = galleryListArr[index].querySelector('.media-list__img');
   popupImg.src = curImg.src;
-  popupTitle.innerHTML = `${index-1}/${galleryListArr.length} - ${curImg.title}`;
+  popupTitle.innerHTML = `${index+1}/${galleryListArr.length} - ${curImg.title}`;
 };
 
 const getPopup = () => {
@@ -74,31 +95,12 @@ const getPopup = () => {
 
     popupImg.addEventListener('click', flipRight);
 
-
     for (let i = 0; i < galleryListArr.length; i++) {
-      galleryListArr[i].addEventListener('click', function(evt) {
-        index = i;
-        evt.preventDefault();
-        modalEl.style.display = 'flex';
-        curImg = galleryListArr[i].querySelector('.media-list__img');
-        //настройки содержимого
-        popupImg.src = curImg.src;
-        popupImg.alt = curImg.alt;
-        popupImg.title = curImg.title;
-        popupTitle.innerHTML = '' + (index + 1) + '/' + galleryListArr.length + ' - ' + curImg.title;
-        //настройки размеров
-        popupImg.style.maxHeight = (0.8 * (screen.height)) + 'px';
-        popupImg.style.maxWidth = (0.95 * (screen.width)) + 'px';
-        popupFigureEl.style.height = (0.9 * (screen.height)) + 'px';
-        arrowLeftEl.style.top = (0.35 * (screen.height)) + 'px';
-        arrowRightEl.style.top = (0.35 * (screen.height)) + 'px';
-        modalEl.style.height = (document.body.scrollHeight) + 'px';
-
-        document.documentElement.scrollTop = 0;
-      });
+      galleryListArr[i].addEventListener('click', (evt) => {openImageInModal(evt, i);});
     }
   }
 
+  //для видео в модальном окне
   if (document.querySelector('.list-video') !== null) {
     const videoListEl = document.querySelector('.list-video').children;
     const videoListArr = Array.prototype.slice.call(videoListEl);
