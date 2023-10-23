@@ -8,7 +8,13 @@ let popupTitle = null;
 let popupCloseEl = null;
 let arrowRightEl = null;
 let arrowLeftEl = null;
+let videoListEl = null;
+let videoListArr = null;
+let modalVideoEl = null;
+let popupVideo = null;
+let popupVideoCloseEl = null;
 let curImg = null;
+let link3dEl = null;
 let index = 0;
 
 const closeModalByDefaltClick = (evt) => {
@@ -66,6 +72,33 @@ const flipLeft = function() {
   popupTitle.innerHTML = `${index+1}/${galleryListArr.length} - ${curImg.title}`;
 };
 
+const showVideo = (evt, link) => {
+  evt.preventDefault();
+  modalVideoEl.style.display = 'flex';
+
+  //настройки содержимого
+  popupVideo.src = link.href;
+  modalVideoEl.style.height = `${document.body.scrollHeight}px`;
+
+  document.documentElement.scrollTop = 0;
+};
+
+const closeVideoModal = function() {
+  modalVideoEl.style.display = 'none';
+  popupVideoCloseEl.removeEventListener('click', closeVideoModal);
+};
+
+const closeVideoModalByArea = function(evt) {
+  const target = evt.target;
+  if (target !== popupVideo) {
+    modalVideoEl.style.display = 'none';
+    for (let i = 0; i < videoListArr.length; i++) {
+      videoListArr[i].removeEventListener('click', showVideo);
+    }
+    modalVideoEl.removeEventListener('click', closeVideoModalByArea);
+  }
+};
+
 const getPopup = () => {
   if (document.querySelector('.media-list__item') !== null) {
     galleryListEl = document.querySelectorAll('.media-list__item');
@@ -102,68 +135,35 @@ const getPopup = () => {
 
   //для видео в модальном окне
   if (document.querySelector('.list-video') !== null) {
-    const videoListEl = document.querySelector('.list-video').children;
-    const videoListArr = Array.prototype.slice.call(videoListEl);
+    videoListEl = document.querySelector('.list-video').children;
+    videoListArr = Array.prototype.slice.call(videoListEl);
 
-    const modalVideoEl = document.querySelector('.popup-video');
+    modalVideoEl = document.querySelector('.popup-video');
 
-    const popupVideo = document.querySelector('iframe');
-    const popupVideoCloseEl = document.querySelector('.popup-video__close');
+    popupVideo = document.querySelector('iframe');
+    popupVideoCloseEl = document.querySelector('.popup-video__close');
 
     for (let i = 0; i < videoListArr.length; i++) {
-      videoListArr[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        modalVideoEl.style.display = 'flex';
-
-        //настройки содержимого
-        popupVideo.src = this.href;
-        modalVideoEl.style.height = `${document.body.scrollHeight}px`;
-
-        document.documentElement.scrollTop = 0;
-      });
+      videoListArr[i].addEventListener('click', (evt) => {showVideo(evt, videoListArr[i]);});
     }
 
-    modalVideoEl.addEventListener('click', function(event) {
-      const target = event.target;
-      if (target !== popupVideo) {
-        modalVideoEl.style.display = 'none';
-      }
-    });
-
-    popupVideoCloseEl.addEventListener('click', function() {
-      modalVideoEl.style.display = 'none';
-    });
+    modalVideoEl.addEventListener('click', (evt) => {closeVideoModalByArea(evt);});
+    popupVideoCloseEl.addEventListener('click', closeVideoModal);
   }
 
   //для вывода 3д в модальном окне
   if (document.querySelector('.media-3d__link') !== null) {
-    const link3dEl = document.querySelector('.media-3d__link');
-    const modalVideoEl = document.querySelector('.popup-video');
-    const popupVideo = document.querySelector('iframe');
-    const popupVideoCloseEl = document.querySelector('.popup-video__close');
+    link3dEl = document.querySelector('.media-3d__link');
+    modalVideoEl = document.querySelector('.popup-video');
+    popupVideo = document.querySelector('iframe');
+    popupVideoCloseEl = document.querySelector('.popup-video__close');
 
-    link3dEl.addEventListener('click', function(e) {
-      e.preventDefault();
-      modalVideoEl.style.display = 'flex';
+    link3dEl.addEventListener('click', (evt) => {showVideo(evt, link3dEl);});
 
-      //настройки содержимого
-      popupVideo.src = this.href;
-      modalVideoEl.style.height = `${document.body.scrollHeight}px`;
+    modalVideoEl.addEventListener('click',(evt) => {closeVideoModalByArea(evt);});
 
-      document.documentElement.scrollTop = 0;
-    });
+    popupVideoCloseEl.addEventListener('click', closeVideoModal);
 
-
-    modalVideoEl.addEventListener('click', function accumulate(event) {
-      const target = event.target;
-      if (target !== popupVideo) {
-        modalVideoEl.style.display = 'none';
-      }
-    });
-
-    popupVideoCloseEl.addEventListener('click', function() {
-      modalVideoEl.style.display = 'none';
-    });
   }
 };
 
