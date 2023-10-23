@@ -13,18 +13,16 @@ let videoListArr = null;
 let modalVideoEl = null;
 let popupVideo = null;
 let popupVideoCloseEl = null;
+let drawing = null;
+let popupSvg = null;
+let modalSvgEl = null;
+let popupSvgFigureEl = null;
 let curImg = null;
 let link3dEl = null;
 let index = 0;
 
-const closeModalByDefaltClick = (evt) => {
-  const target = evt.target;
-  if ((target !== popupImg) && (target !== arrowRightEl) && (target !== arrowLeftEl)) {
-    modalEl.style.display = 'none';
-  }
-};
 
-const openImageInModal = (evt, i) => {
+const showImage = (evt, i) => {
   index = i;
   evt.preventDefault();
   modalEl.style.display = 'flex';
@@ -45,8 +43,15 @@ const openImageInModal = (evt, i) => {
   document.documentElement.scrollTop = 0;
 };
 
-const closeModalByBtnClick = function() {
+const closeModal = function() {
   modalEl.style.display = 'none';
+};
+
+const closeModalByArea = (evt) => {
+  const target = evt.target;
+  if ((target !== popupImg) && (target !== arrowRightEl) && (target !== arrowLeftEl)) {
+    modalEl.style.display = 'none';
+  }
 };
 
 const flipRight = function() {
@@ -99,6 +104,34 @@ const closeVideoModalByArea = function(evt) {
   }
 };
 
+const showSvg = (evt, elem) => {
+  evt.preventDefault();
+  modalSvgEl.style.display = 'flex';
+  const svg = elem.querySelector('.svg__img');
+  console.log(popupSvg);
+  //настройки содержимого
+  popupSvg.src = svg.src;
+  popupSvg.alt = svg.alt;
+  popupSvg.title = svg.title;
+  //настройки размеров
+  popupSvg.style.backgroundColor = 'white';
+  popupSvg.style.height = `${(0.5 * (screen.height))}px`;
+  popupSvg.style.maxWidth = `${(0.95 * (screen.width))}px`;
+  popupSvgFigureEl.style.width = '70%';
+  popupSvgFigureEl.style.height = `${(0.9 * (screen.height))}px`;
+  arrowLeftEl.style.display = 'none';
+  arrowRightEl.style.display = 'none';
+
+  document.documentElement.scrollTop = 0;
+};
+
+const closeSvgModalByArea = (evt) => {
+  const target = evt.target;
+  if (target !== popupSvg) {
+    modalSvgEl.style.display = 'none';
+  }
+};
+
 const getPopup = () => {
   if (document.querySelector('.media-list__item') !== null) {
     galleryListEl = document.querySelectorAll('.media-list__item');
@@ -118,9 +151,9 @@ const getPopup = () => {
       arrowLeftEl.style.display = 'none';
     }
 
-    popupCloseEl.addEventListener('click', closeModalByBtnClick);
+    popupCloseEl.addEventListener('click', closeModal);
 
-    modalEl.addEventListener('click', (evt) => {closeModalByDefaltClick(evt);});
+    modalEl.addEventListener('click', (evt) => {closeModalByArea(evt);});
 
     arrowRightEl.addEventListener('click', flipRight);
 
@@ -129,8 +162,18 @@ const getPopup = () => {
     popupImg.addEventListener('click', flipRight);
 
     for (let i = 0; i < galleryListArr.length; i++) {
-      galleryListArr[i].addEventListener('click', (evt) => {openImageInModal(evt, i);});
+      galleryListArr[i].addEventListener('click', (evt) => {showImage(evt, i);});
     }
+  }
+
+  //чертеж
+  if (document.querySelector('.product-info__svg') !== null) {
+    modalSvgEl = document.querySelector('.popup-svg');
+    popupSvgFigureEl = document.querySelector('.popup-svg__figure');
+    popupSvg = document.querySelector('.popup-svg__img');
+    drawing = document.querySelector('.product-info__svg');
+    drawing.addEventListener('click',(evt) => {showSvg(evt, drawing);});
+    modalSvgEl.addEventListener('click', (evt) => {closeSvgModalByArea(evt);});
   }
 
   //для видео в модальном окне
