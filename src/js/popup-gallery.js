@@ -89,6 +89,8 @@ const showVideo = (evt, link) => {
 };
 
 const closeVideoModal = function() {
+  popupVideo.removeAttribute('src');
+  popupVideo.innerHTML = '';
   modalVideoEl.style.display = 'none';
   popupVideoCloseEl.removeEventListener('click', closeVideoModal);
 };
@@ -96,6 +98,8 @@ const closeVideoModal = function() {
 const closeVideoModalByArea = function(evt) {
   const target = evt.target;
   if (target !== popupVideo) {
+    popupVideo.removeAttribute('src');
+    popupVideo.innerHTML = '';
     modalVideoEl.style.display = 'none';
     for (let i = 0; i < videoListArr.length; i++) {
       videoListArr[i].removeEventListener('click', showVideo);
@@ -183,8 +187,8 @@ const getPopup = () => {
 
     modalVideoEl = document.querySelector('.popup-video');
 
-    popupVideo = document.querySelector('iframe');
-    popupVideoCloseEl = document.querySelector('.popup-video__close');
+    popupVideo = modalVideoEl.querySelector('iframe');
+    popupVideoCloseEl = modalVideoEl.querySelector('.popup-video__close');
 
     for (let i = 0; i < videoListArr.length; i++) {
       videoListArr[i].addEventListener('click', (evt) => {showVideo(evt, videoListArr[i]);});
